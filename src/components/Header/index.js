@@ -3,8 +3,8 @@ import {Container} from './styles';
 
 const Header = () => {
     return (
-        <Container>
-            <h1>Softwave</h1>
+        <Container>          
+            <button>Start</button>
         </Container>
     )
 }

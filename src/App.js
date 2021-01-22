@@ -4,6 +4,8 @@ import FileUpload from './FileUpload';
 import GlobalFonts from './styles/fonts/fonts';
 import GlobalStyle from './GlobalStyle';
 import Header from './components/Header'
+
+import Box from './components/Box'
 //font:
 //https://fontsarena.com/w95fa-by-fontsarena/
 
@@ -15,6 +17,7 @@ function App() {
     <div>
       <header>
         <Header/>
+        <Box/>
         <FileUpload/>
         <GlobalFonts/>
         <GlobalStyle/>
