@@ -1,11 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
-import FileUpload from './FileUpload';
-import GlobalFonts from './styles/fonts/fonts';
-import GlobalStyle from './GlobalStyle';
-import Header from './components/Header'
-
-import Box from './components/Box'
+import { BrowserRouter, Routes, Route} from "react-router-dom";
+import Home from './pages/Home';
 //font:
 //https://fontsarena.com/w95fa-by-fontsarena/
 
@@ -14,15 +10,11 @@ import Box from './components/Box'
 
 function App() {
   return (
-    <div>
-      <header>
-        <Header/>
-        <Box/>
-        <FileUpload/>
-        <GlobalFonts/>
-        <GlobalStyle/>
-      </header>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Home/>}/>
+      </Routes>
+    </BrowserRouter>
   );
 }
 
