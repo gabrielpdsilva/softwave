@@ -3,8 +3,8 @@ import {Container} from './styles';
 
 const Header = () => {
     return (
-        <Container>          
-            <button>Start</button>
+        <Container>
+            <h1>Header</h1>
         </Container>
     )
 }
