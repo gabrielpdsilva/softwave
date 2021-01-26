@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 // import { Container } from './styles';
 
-const FileUpload = () => {
+const FileUploader = () => {
 
     const [imagem, setImagem] = useState(null);
     const [url, setUrl] = useState("");
@@ -26,4 +26,4 @@ const FileUpload = () => {
     )
 }
 
-export default FileUpload;
+export default FileUploader;

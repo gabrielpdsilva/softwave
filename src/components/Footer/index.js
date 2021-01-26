@@ -1,16 +1,24 @@
-import React from 'react';
+import React, {useState} from 'react';
 import WindowsButton from '../WindowsButton';
-import {Container} from './styles';
+import {Container, Row, Data} from './styles';
 import logo from '../../windows-logo.png';
 
-const Footer = () => { 
-    
-    const handleStart = (mensagem) => alert("clicou");
+const Footer = () => {
+
+    let anoAtual = new Date().getFullYear();
+    const [data, setData] = useState(anoAtual);
+
+    const handleStart = () => alert("clicou em Start");
 
     return (
-        <Container>
-            <WindowsButton imagem={logo} texto="Start" onPress={() => handleStart("minha mensagem")}/>
-        </Container>
+        <footer>        
+            <Container>
+                <Row>
+                    <WindowsButton imagem={logo} texto="Start" onPress={handleStart}/>
+                    <Data>{data}</Data>
+                </Row>
+            </Container>
+        </footer>
     );
 }
 

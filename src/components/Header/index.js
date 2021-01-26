@@ -1,10 +1,10 @@
 import React from 'react';
 import {Container} from './styles';
 
-const Header = () => {
+const Header = ({titulo}) => {
     return (
         <Container>
-            <h1>Header</h1>
+            <h1>{titulo}</h1>
         </Container>
     )
 }
