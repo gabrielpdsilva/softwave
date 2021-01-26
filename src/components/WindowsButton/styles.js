@@ -13,7 +13,7 @@ export const Botao = styled.div`
         font-weight: bold;
         text-align: center;
         border-width: 1px;
-        background: ${COLORS.cinzaClaro};
+        background-color: ${COLORS.cinzaClaro};
         border-color:#FFFFFF #808080 #808080 #FFFFFF;
     }
 `;

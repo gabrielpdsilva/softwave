@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
-// import { Container } from './styles';
+import WindowsButton from '../../components/WindowsButton';
+import { Container } from './styles';
 
 const FileUploader = () => {
 
@@ -18,11 +19,13 @@ const FileUploader = () => {
         alert("Clicou em Enviar");
     };
     return (
-        <div>
+        <Container>
+            
             <h1>Upar imagem</h1>
             <input type="file" onChange={handleChange}/>
-            <button onClick={handleUpload}>Enviar Imagem</button>
-        </div>
+            <WindowsButton texto="Enviar" onPress={handleUpload}/>
+            
+        </Container>
     )
 }
 
