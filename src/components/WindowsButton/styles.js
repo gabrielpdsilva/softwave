@@ -5,7 +5,7 @@ export const Botao = styled.div`
     // util:
     // https://codepen.io/supember/pen/BKmgNZ
     button {
-        width: 80px;
+        width: 90px;
         height: 35px;
         margin: 4px;
         color: black;
