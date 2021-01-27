@@ -1,6 +1,8 @@
 import React, {useState} from 'react';
 import WindowsButton from '../../components/WindowsButton';
-import { Container } from './styles';
+import Frame from '../../components/Frame';
+import { Container, Row } from './styles';
+import wallpaper from '../../aesthetics.jpg'
 
 const FileUploader = () => {
 
@@ -22,9 +24,11 @@ const FileUploader = () => {
         <Container>
             
             <h1>Upar imagem</h1>
-            <input type="file" onChange={handleChange}/>
-            <WindowsButton texto="Enviar" onPress={handleUpload}/>
-            
+            <Row>    
+                <input type="file" onChange={handleChange}/>
+                <WindowsButton texto="Enviar" onPress={handleUpload}/>
+            </Row>
+            <Frame imagem={wallpaper} width={220} height={40}/>
         </Container>
     )
 }

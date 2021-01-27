@@ -5,16 +5,18 @@ export const Caixa = styled.div`
     //display: flex;
 //    display: flex;
 //    align-items: center;
-    width: 292px;
+    //width: 292px;
+    width: ${props => props.width - 10}px;
     border: 1px;
     border-style:solid;
-    border-color: #808080;
-    height: 100px;
+    border-color: #FFFFFF #808080 #808080 #FFFFFF;
+    //height: 100px;
+    height: ${props => props.height > 10 ? props.height : 5}px;
     margin: auto;
     padding: 10px;
     margin-top: 10px;
     background-color: ${COLORS.cinzaClaro};
-
+/*
     .box{
   width:292px;
   background:#C0C0C0;
@@ -25,7 +27,7 @@ export const Caixa = styled.div`
   top:50%;
   left:50%;
   transform: translate(-50%,-50%);
-  padding:1px;
+  padding:1px;*/
 }
     
 `;
