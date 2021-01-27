@@ -1,10 +1,12 @@
-import logo from './logo.svg';
 import './App.css';
 import { BrowserRouter, Routes, Route} from "react-router-dom";
-import Home from './pages/Home';
+
 import Header from './components/Header';
 import Footer from './components/Footer';
+
+import Home from './pages/Home';
 import FileUploader from './pages/FileUploader';
+import About from './pages/About';
 
 import GlobalFonts from './styles/fonts/fonts';
 import GlobalStyle from './GlobalStyle';
@@ -23,9 +25,9 @@ function App() {
         <Routes>
           <Route path="/" element={<Home/>}/>
           <Route path="/upload" element={<FileUploader/>}/>
+          <Route path="/about" element={<About/>}/>
         </Routes>
       <Footer/>
-
     </BrowserRouter>
   );
 }
