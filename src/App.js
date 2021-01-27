@@ -17,10 +17,8 @@ import GlobalStyle from './GlobalStyle';
 function App() {
   return (
     <BrowserRouter>
-      
       <GlobalFonts/>
       <GlobalStyle/>
-      
       <Header titulo="Softwave"/>
         <Routes>
           <Route path="/" element={<Home/>}/>
