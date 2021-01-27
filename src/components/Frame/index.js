@@ -10,12 +10,15 @@ class Frame extends React.Component {
         const width = this.props.width;
         const height = this.props.height;
         const imagem = this.props.imagem;
+        const nomeImagem = this.props.nomeImagem;
 
         return (
-            <Caixa largura={width} height={this.props.height}>
-                
+            <Caixa width={width} height={height}>
                 {
-                    this.props.imagem && <img src={this.props.imagem} alt="Logo"/>
+                    imagem && <img src={imagem} style = {{width: width, height: height}} alt="Logo"/>
+                }
+                {
+                    nomeImagem
                 }
             </Caixa>
         )
