@@ -1,10 +1,22 @@
 import React from 'react';
-import {Container} from './styles';
+import {Container, Row, StyledLink} from './styles';
 
 const Header = ({titulo}) => {
     return (
         <Container>
-            <h1>{titulo}</h1>
+            
+            <Row>
+                <StyledLink to="/">
+                    <h1>
+                        {titulo}
+                    </h1>
+                </StyledLink>
+
+                <StyledLink to="/upload">Upload Image</StyledLink>
+                <StyledLink to="/about">About</StyledLink>
+                
+            </Row>
+                  
         </Container>
     )
 }

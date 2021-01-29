@@ -32,8 +32,6 @@ const Home = () => {
 
     return (
         <Container>
-            
-            <Link to="/upload">Upload image</Link>
 
             <Row>
                 {urls.map((url, index) => (
