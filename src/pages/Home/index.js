@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import {Container} from './styles';
+import {Container, Row} from './styles';
 import Frame from '../../components/Frame';
 import {Link} from 'react-router-dom';
 
@@ -11,7 +11,7 @@ import {storage} from '../../firebase';
 const Home = () => {
 
     const valorInicial = [];
-    const [urls, setUrl] = useState(valorInicial);
+    const [urls, setUrls] = useState(valorInicial);
 
     const getImageUrlsFromStorage = async () => {
         let result = await storage.ref("images/").listAll();
@@ -21,7 +21,7 @@ const Home = () => {
 
     const loadImages = async () => {
         const allUrls = await getImageUrlsFromStorage();
-        setUrl(allUrls);
+        setUrls(allUrls);
         console.log("URLS: ", urls);
     }
 
@@ -33,15 +33,15 @@ const Home = () => {
     return (
         <Container>
             
-            <Link to="/upload">Upload image</Link> 
+            <Link to="/upload">Upload image</Link>
 
-            <div>
+            <Row>
                 {urls.map((url, index) => (
-                    <div key={index}>         
-                        <Frame imagem={url} nomeImagem="Retro 90s" width={200} height={100}/>
+                    <div key={index}>  
+                        <Frame imagem={url}/>
                     </div>
                 ))}
-            </div>
+            </Row>
                     
         </Container>
     );

@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import WindowsButton from '../../components/WindowsButton';
-import { Container, Row } from './styles';
+import { Container, Row, Box} from './styles';
 import {storage} from '../../firebase';
 
 // util:
@@ -40,22 +40,31 @@ const FileUploader = () => {
                     .getDownloadURL()
                     .then(url => {
                         setUrl(url);
+                        alert("Successful");
                     })
             }
         )
     };
 
-    console.log("image -> ", image)
+    console.log("image -> ", image);
     return (
         <Container>
-            
-            <h1>Upar imagem</h1>
-            <progress value={progress} max="100"/>
-            <img src={url || "http://via.placeholder.com/300"} alt="firebase-image"/>
-            <Row>    
-                <input type="file" onChange={handleChange}/>
-                <WindowsButton texto="Enviar" onPress={handleUpload}/>
-            </Row>
+
+            <Box>
+
+                <h1>Upload image</h1>
+                <p>Choose an awesome image to upload to Softwave!</p>
+                
+                <img src={url || "https://i.imgur.com/YTmPA0u.jpg"} alt="firebase-image"/>
+
+                <Row>    
+                    <input type="file" onChange={handleChange}/>
+                    <WindowsButton texto="Enviar" onPress={handleUpload}/>
+                </Row>
+
+                {!url && <progress value={progress} max="100"/>}
+                
+            </Box>
             
         </Container>
     )
