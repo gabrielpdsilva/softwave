@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import {Container, Row} from './styles';
 import Frame from '../../components/Frame';
-import {Link} from 'react-router-dom';
 
 import {storage} from '../../firebase';
 
