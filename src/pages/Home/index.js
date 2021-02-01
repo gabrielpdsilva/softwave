@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import {Container, Row} from './styles';
+import {Container, Row, CenteredContent} from './styles';
 import Frame from '../../components/Frame';
 
 import {storage} from '../../firebase';
@@ -40,6 +40,9 @@ const Home = () => {
     if(ImagesLoading) {
         return (
             <Container>
+
+                <h1>Oi</h1>
+                
                 <Loader
                     type="Oval"
                     color="#d685ff"
@@ -65,17 +68,22 @@ const Home = () => {
             </GridList>
 */}
 
-
-            <GridList cellHeight='auto' cols={3}>
+{
+/*
+<GridList cellHeight='auto' cols={3}>
                 {urls.map((url, index) => (
                     <GridListTile key={index}>
                         <Frame imagem={url}/>
+                        <img src={url}/>
                     </GridListTile>
                 ))}
             </GridList>
-            
+*/
+}
+
+   
         {
-/*
+            
             <Row>
                 {urls.map((url, index) => (
                     <div key={index}>  
@@ -83,7 +91,7 @@ const Home = () => {
                     </div>
                 ))}
             </Row>
-            */
+            
 
         }
             

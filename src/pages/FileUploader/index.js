@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import WindowsButton from '../../components/WindowsButton';
-import { Container, Row, Box} from './styles';
+import { Container, Row, FileInput, Box} from './styles';
 import {storage} from '../../firebase';
 
 // util:
@@ -61,14 +61,19 @@ const FileUploader = () => {
                 <h1>Upload image</h1>
                 <p>Choose an awesome image to upload to Softwave!</p>
                 
-                <img src={url || "https://i.imgur.com/YTmPA0u.jpg"} alt="firebase-image"/>
+                <img style={{padding: 30}} src={url || "https://i.imgur.com/YTmPA0u.jpg"} alt="firebase-image"/>
 
-                <Row>    
-                    <input type="file" onChange={handleChange}/>
-                    <WindowsButton texto="Enviar" onPress={handleUpload}/>
+                <Row>
+                    {!url && <progress value={progress} style={{marginLeft: 10, width: 250}} max="100"/>}
                 </Row>
 
-                {!url && <progress value={progress} max="100"/>}
+                <Row>
+                    <FileInput>
+                        <input type="file" onChange={handleChange}/>
+                    </FileInput>
+
+                   <WindowsButton texto="Enviar" onPress={handleUpload}/>
+                </Row>
                 
             </Box>
             
