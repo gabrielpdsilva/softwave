@@ -21,6 +21,12 @@ const FileUploader = () => {
     console.log(image);
 
     const handleUpload = () => {
+
+        if(!image) {
+            alert("Nenhuma imagem foi selecionada.");
+            return;
+        }
+
         const uploadTask = storage.ref(`images/${image.name}`).put(image);
         uploadTask.on(
             "state_changed",
