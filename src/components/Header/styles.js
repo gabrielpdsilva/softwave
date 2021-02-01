@@ -21,6 +21,7 @@ export const Row = styled.div`
 
 export const StyledLink = styled(Link)`
     text-decoration: none;
+    margin-right: 20px;
 
     &:focus, &:hover, &:visited, &:link, &:active {
         text-decoration: none;
