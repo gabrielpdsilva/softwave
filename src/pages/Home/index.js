@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import {Container, Row, CenteredContent} from './styles';
+import {Container, Row, CustomGrid} from './styles';
 import Frame from '../../components/Frame';
 
 import {storage} from '../../firebase';
@@ -7,12 +7,16 @@ import {storage} from '../../firebase';
 import GridList from '@material-ui/core/GridList';
 import GridListTile from '@material-ui/core/GridListTile';
 
+
+
 import Loader from 'react-loader-spinner'
 
 // util
 // https://stackoverflow.com/questions/64708353/how-to-display-all-the-images-from-firebase-storage-in-react
 
 const Home = () => {
+
+    const images = ['https://c2.staticflickr.com/9/8817/28973449265_07e3aa5d2e_b.jpg']
 
     const valorInicial = [];
     const [urls, setUrls] = useState(valorInicial);
@@ -82,18 +86,21 @@ const Home = () => {
 }
 
    
-        {
+        
             
-            <Row>
+            <CustomGrid>
                 {urls.map((url, index) => (
-                    <div key={index}>  
-                        <Frame imagem={url}/>
+                    <div key={index}> 
+                        <a href={url} target="_blank"> 
+                            <img src={url} style={{borderStyle: 'solid', backgroundColor: '#c3c3c3', padding: 10, borderWidth: 1, borderColor: '#FFFFFF #808080 #808080 #FFFFFF', width: '50%'}}/>
+                        </a>
                     </div>
                 ))}
-            </Row>
+            </CustomGrid>
+
             
 
-        }
+        
             
                     
         </Container>
