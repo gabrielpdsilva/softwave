@@ -1,8 +1,16 @@
 import styled from 'styled-components';
 import COLORS from '../../styles/colors';
 
+// util
+// https://stackoverflow.com/questions/9648910/how-to-set-the-background-color-of-the-whole-page-in-css
+
 export const Container = styled.div`
-    //height: 90vh;
+
+    // usado pra manter toda a tela verde, necessario alterar depois
+    // provavelmente adicionando esse estilo como Global pelo styled components
+    * {
+        background-color: ${COLORS.verde};
+    }
     background-color: ${COLORS.verde};
     height: 100vh;
 
