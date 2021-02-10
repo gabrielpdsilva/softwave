@@ -6,7 +6,7 @@ export const Container = styled.div`
     align-items: center;
     justify-content: center;
     
-    height: 90vh;
+    height: 100vh;
     background-color: ${COLORS.verde};
 `;
 

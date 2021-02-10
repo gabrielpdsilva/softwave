@@ -8,7 +8,17 @@ const Grid = ({urls}) => {
             {urls.map((url, index) => (
                 <div key={index}> 
                     <a href={url} target="_blank"> 
-                        <img src={url} style={{borderStyle: 'solid', backgroundColor: '#c3c3c3', padding: 10, borderWidth: 1, borderColor: '#FFFFFF #808080 #808080 #FFFFFF', width: '50%'}}/>
+                        <img src={url}
+                             style={{
+                                borderStyle: 'solid',
+                                backgroundColor: '#c3c3c3',
+                                padding: 10,
+                                borderWidth: 1,
+                                borderColor: '#FFFFFF #808080 #808080 #FFFFFF',
+                                width: '65%',
+                                height: 'auto'
+                            }}
+                        />
                     </a>
                 </div>
             ))}

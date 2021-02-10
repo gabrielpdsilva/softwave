@@ -10,9 +10,11 @@ export const Container = styled.div`
     border-width: 1px;
     border-style: solid;
     border-color: #FFFFFF #808080 #808080 #FFFFFF;
-
-
-    //width: 100%;
+    
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
 `;
 
 export const Row = styled.div`

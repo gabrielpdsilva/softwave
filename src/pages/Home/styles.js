@@ -4,7 +4,8 @@ import COLORS from '../../styles/colors';
 export const Container = styled.div`
     //height: 90vh;
     background-color: ${COLORS.verde};
-    height: 90vh;
+    height: 100vh;
+
 `;
 
 export const Row = styled.div`
