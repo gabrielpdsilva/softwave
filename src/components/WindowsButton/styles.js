@@ -14,6 +14,6 @@ export const Botao = styled.div`
         text-align: center;
         border-width: 1px;
         background-color: ${COLORS.cinzaClaro};
-        border-color:#FFFFFF #808080 #808080 #FFFFFF;
+        border-color: ${COLORS.branco} ${COLORS.cinzaEscuro} ${COLORS.cinzaEscuro} ${COLORS.branco};
     }
 `;

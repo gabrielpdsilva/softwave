@@ -11,6 +11,7 @@ import FileUploader from './pages/FileUploader';
 import About from './pages/About';
 
 import GlobalStyles from './styles/GlobalStyles';
+
 //font:
 //https://fontsarena.com/w95fa-by-fontsarena/
 

@@ -5,9 +5,6 @@ export const Container = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
-    
-    //height: 100vh;
-    //background-color: ${COLORS.verde};
 `;
 
 export const FileInput = styled.div`

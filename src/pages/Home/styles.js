@@ -6,14 +6,6 @@ import COLORS from '../../styles/colors';
 
 export const Container = styled.div`
 
-    // usado pra manter toda a tela verde, necessario alterar depois
-    // provavelmente adicionando esse estilo como Global pelo styled components
-    //* {
-    //    background-color: ${COLORS.verde};
-    //}
-    //background-color: ${COLORS.verde};
-    //height: 100vh;
-
 `;
 
 export const Row = styled.div`

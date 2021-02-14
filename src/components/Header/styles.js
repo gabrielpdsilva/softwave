@@ -8,10 +8,10 @@ import { Link } from 'react-router-dom';
 
 export const Container = styled.div`
     background-color: ${COLORS.cinzaClaro};
-    height: 45px;
+    padding: 3px;
     border-width: 1px;
     border-style: solid;
-    border-color:#FFFFFF #808080 #808080 #FFFFFF;
+    border-color: ${COLORS.branco} ${COLORS.cinzaEscuro} ${COLORS.cinzaEscuro} ${COLORS.branco};
 `;
 
 export const Row = styled.div`
