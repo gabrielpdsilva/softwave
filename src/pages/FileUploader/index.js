@@ -58,8 +58,8 @@ const FileUploader = () => {
 
             <Box>
                 
-                <h1>Upload image</h1>
-                <p>Choose an awesome image to upload to Softwave!</p>
+                <h1>Upar Imagem</h1>
+                <p>Escolha uma imagem incrível para upar no Softwave!</p>
                 
                 <img style={{padding: 30, width: '50%'}} src={url || "https://i.imgur.com/YTmPA0u.jpg"} alt="firebase-image"/>
                 

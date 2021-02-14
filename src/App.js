@@ -22,7 +22,7 @@ function App() {
   return (
     <BrowserRouter>
       <GlobalStyles/>
-      <Header titulo="Softwave"/>
+      <Header title="Softwave"/>
         <Routes>
           <Route path="/" element={<Home/>}/>
           <Route path="/login" element={<Login/>}/>
