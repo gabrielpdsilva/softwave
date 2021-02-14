@@ -4,7 +4,7 @@ import {Container} from './styles';
 const About = () => {
     return (
         <Container>
-            <h1>About...</h1>
+            <h1>Sobre...</h1>
         </Container>
     );
 }

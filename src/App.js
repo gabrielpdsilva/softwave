@@ -9,6 +9,7 @@ import Login from './pages/Login';
 import Registration from './pages/Registration';
 import FileUploader from './pages/FileUploader';
 import About from './pages/About';
+import NotFound from './pages/NotFound';
 
 import GlobalStyles from './styles/GlobalStyles';
 
@@ -26,9 +27,15 @@ function App() {
         <Routes>
           <Route path="/" element={<Home/>}/>
           <Route path="/login" element={<Login/>}/>
-          <Route path="/registration" element={<Registration/>}/>
-          <Route path="/upload" element={<FileUploader/>}/>
-          <Route path="/about" element={<About/>}/>
+          <Route path="/cadastro" element={<Registration/>}/>
+          <Route path="/upar" element={<FileUploader/>}/>
+          <Route path="/sobre" element={<About/>}/>
+
+
+
+          <Route element={<NotFound/>}/>
+
+
         </Routes>
       <Footer/>
     </BrowserRouter>

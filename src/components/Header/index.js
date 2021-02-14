@@ -9,8 +9,8 @@ const Header = ({title}) => {
                 <StyledLink to="/">
                     <h1>{title}</h1>
                 </StyledLink>
-                <StyledLink to="/upload">Upar Imagem</StyledLink>
-                <StyledLink to="/about">Sobre</StyledLink>
+                <StyledLink to="/upar">Upar Imagem</StyledLink>
+                <StyledLink to="/sobre">Sobre</StyledLink>
                 
             </Row>
                   
