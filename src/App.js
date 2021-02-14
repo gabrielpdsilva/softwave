@@ -10,8 +10,7 @@ import Registration from './pages/Registration';
 import FileUploader from './pages/FileUploader';
 import About from './pages/About';
 
-import GlobalFonts from './styles/fonts/fonts';
-import GlobalStyle from './GlobalStyle';
+import GlobalStyles from './styles/GlobalStyles';
 //font:
 //https://fontsarena.com/w95fa-by-fontsarena/
 
@@ -21,8 +20,7 @@ import GlobalStyle from './GlobalStyle';
 function App() {
   return (
     <BrowserRouter>
-      <GlobalFonts/>
-      <GlobalStyle/>
+      <GlobalStyles/>
       <Header titulo="Softwave"/>
         <Routes>
           <Route path="/" element={<Home/>}/>

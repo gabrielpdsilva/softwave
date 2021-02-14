@@ -3,5 +3,5 @@ import COLORS from '../../styles/colors';
 
 export const Container = styled.div`
     height: 100vh;
-    background-color: ${COLORS.verde};
+    //background-color: ${COLORS.verde};
 `;

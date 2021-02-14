@@ -7,7 +7,7 @@ export const Container = styled.div`
     justify-content: center;
     
     height: 100vh;
-    background-color: ${COLORS.verde};
+    //background-color: ${COLORS.verde};
 `;
 
 export const FileInput = styled.div`
