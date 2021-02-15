@@ -45,6 +45,7 @@ const Home = () => {
 
     // Similar ao componentDidMount e componentDidUpdate:
     useEffect(() => {
+        document.title = "SOFTWAVE";
         loadImages();
     }, []);
 

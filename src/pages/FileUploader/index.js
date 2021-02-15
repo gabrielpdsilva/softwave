@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import WindowsButton from '../../components/WindowsButton';
 import {Container, Row, FileInput, Box} from './styles';
 import {storage} from '../../firebase';
@@ -52,7 +52,12 @@ const FileUploader = () => {
         )
     };
 
+    useEffect(() => {
+        document.title = "Upar Imagem";
+    }, []);
+
     console.log("image -> ", image);
+
     return (
         <Container>
 

@@ -31,10 +31,8 @@ function App() {
           <Route path="/upar" element={<FileUploader/>}/>
           <Route path="/sobre" element={<About/>}/>
 
-
-
-          <Route element={<NotFound/>}/>
-
+          {/*TODO*/}
+          <Route path="*" element={<NotFound/>}/>
 
         </Routes>
       <Footer/>
