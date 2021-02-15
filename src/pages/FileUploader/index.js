@@ -47,9 +47,11 @@ const FileUploader = () => {
                     .then(url => {
                         setUrl(url);
                         alert("Successful");
-                    })
+                    });
             }
-        )
+        );
+        
+        setUrl("");
     };
 
     useEffect(() => {
@@ -66,7 +68,7 @@ const FileUploader = () => {
                 <h1>Upar Imagem</h1>
                 <p>Escolha uma imagem incrível para upar no Softwave!</p>
                 
-                <img style={{padding: 30, width: '50%'}} src={url || "https://i.imgur.com/YTmPA0u.jpg"} alt="firebase-image"/>
+                <img style={{padding: 30, width: '50%', height: '60%'}} src={url || "https://i.imgur.com/YTmPA0u.jpg"} alt="firebase-image"/>
                 
                 <Row>
                     {!url && <progress value={progress} style={{marginLeft: 10, width: 250}} max="100"/>}

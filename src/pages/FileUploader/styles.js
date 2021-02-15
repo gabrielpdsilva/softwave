@@ -2,9 +2,11 @@ import styled from 'styled-components';
 import COLORS from '../../styles/colors'
 
 export const Container = styled.div`
+    height: 90vh;
     display: flex;
     align-items: center;
     justify-content: center;
+    
 `;
 
 export const FileInput = styled.div`
@@ -23,6 +25,8 @@ export const Box = styled.div`
     box-sizing: border-box;
     max-width: 1000px;
     width: 500px;
+    max-height: 75%;
+    min-height: 300px;
 
     border-color:#FFFFFF #808080 #808080 #FFFFFF;
     border-style: solid;
@@ -31,7 +35,7 @@ export const Box = styled.div`
     background-color: ${COLORS.cinzaClaro};
 //    margin: auto;
 //    width: 30%;
-    height: 50%;
+    height: 60%;
     text-align: center;
     margin-bottom: 100px;
 `;
