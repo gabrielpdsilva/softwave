@@ -11,7 +11,8 @@ Softwave is a project made for tests and studies using React.js. Its purpose is 
 - [ ] add functionality for Start button;
 
 ### Styles
-- [ ] centralize content at "Upar Imagem" page.
+- [x] centralize content at "Upar Imagem" page;
+- [ ] make a dinamic box at "Upar Imagem" page;
 - [ ] add custom Alert;
 
 ### Pages

@@ -50,7 +50,6 @@ const FileUploader = () => {
                     });
             }
         );
-        
         setUrl("");
     };
 
