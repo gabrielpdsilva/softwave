@@ -11,6 +11,7 @@ const FileUploader = () => {
     const [image, setImage] = useState(null);
     const [url, setUrl] = useState("");
     const [progress, setProgress] = useState(0);
+    const [category, setCategory] = useState("vaporwave");
 
     const handleChange = e => {
         if(e.target.files[0]) {
@@ -27,7 +28,7 @@ const FileUploader = () => {
             return;
         }
 
-        const uploadTask = storage.ref(`images/${image.name}`).put(image);
+        const uploadTask = storage.ref(`images/${category}/${image.name}`).put(image);
         uploadTask.on(
             "state_changed",
             snapshot => {
@@ -53,6 +54,10 @@ const FileUploader = () => {
         setUrl("");
     };
 
+    const handleSelect = (event) => {
+        setCategory(event.target.value);
+    }
+
     useEffect(() => {
         document.title = "Upar Imagem";
     }, []);
@@ -69,6 +74,19 @@ const FileUploader = () => {
                 
                 <img style={{padding: 30, width: '50%', height: '60%'}} src={url || "https://i.imgur.com/YTmPA0u.jpg"} alt="firebase-image"/>
                 
+                {/*TODO*/}
+                <div style={{margin: 5}}>
+                
+                    <p>{category}</p>
+
+                    <select value={category} onChange={handleSelect}>
+                        <option value="cyberpunk">Cyberpunk</option>
+                        <option value="doomerwave">Doomer Wave</option>
+                        <option value="synthwave">Synthwave</option>
+                        <option selected value="vaporwave">Vaporwave</option>
+                    </select>
+                </div>
+
                 <Row>
                     {!url && <progress value={progress} style={{marginLeft: 10, width: 250}} max="100"/>}
                 </Row>
@@ -80,6 +98,8 @@ const FileUploader = () => {
 
                    <WindowsButton texto="Enviar" onPress={handleUpload}/>
                 </Row>
+
+               
                 
             </Box>
             
