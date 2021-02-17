@@ -7,6 +7,10 @@ import { Link } from 'react-router-dom';
 // https://stackoverflow.com/questions/37669391/how-to-get-rid-of-underline-for-link-component-of-react-router
 
 export const Container = styled.div`
+
+    //width: 100%;
+    //position: fixed;
+
     background-color: ${COLORS.cinzaClaro};
     padding: 3px;
     border-width: 1px;

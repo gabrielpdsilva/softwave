@@ -104,20 +104,19 @@ const Home = () => {
             {
                 imagesExist ?
 
-                <div>
-                
-                <div style={{margin: 5}}>
-                
-                    <p>{category}</p>
+                    <div>
+                        <div style={{margin: 5}}>
+                        
+                            <p>{category}</p>
 
-                    <select value={category} onChange={handleSelect}>
-                        <option value="cyberpunk">Cyberpunk</option>
-                        <option value="doomerwave">Doomer Wave</option>
-                        <option value="synthwave">Synthwave</option>
-                        <option selected value="vaporwave">Vaporwave</option>
-                    </select>
-                </div>
-                    <Grid urls={urls}/> 
+                            <select value={category} onChange={handleSelect}>
+                                <option value="cyberpunk">Cyberpunk</option>
+                                <option value="doomerwave">Doomer Wave</option>
+                                <option value="synthwave">Synthwave</option>
+                                <option selected value="vaporwave">Vaporwave</option>
+                            </select>
+                        </div>
+                        <Grid urls={urls}/> 
                     </div>
                 :
                     <h1>Ainda não foram adicionadas imagens.</h1>         

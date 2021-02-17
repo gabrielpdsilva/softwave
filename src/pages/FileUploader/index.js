@@ -42,7 +42,7 @@ const FileUploader = () => {
             },
             () => {
                 storage
-                    .ref("images")
+                    .ref(`images/${category}/`)
                     .child(image.name)
                     .getDownloadURL()
                     .then(url => {
