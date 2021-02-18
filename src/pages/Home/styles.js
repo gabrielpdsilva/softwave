@@ -11,9 +11,17 @@ export const Container = styled.div`
     margin: 5px;
 `;
 
-export const Text = styled.h2`
+export const Title = styled.h1`
+    margin: 5px;
+`;
+
+export const Subtitle = styled.h2`
     margin-right: 10px;
     color: ${COLORS.preto};
+`;
+
+export const Text = styled.p`
+    color: ${COLORS.azulEscuro};
 `;
 
 export const Select = styled.select`

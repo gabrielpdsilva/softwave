@@ -1,7 +1,19 @@
 import React, {useState, useEffect} from 'react';
 import WindowsButton from '../../components/WindowsButton';
-import {Container, Row, FileInput, Box, Select, Text, Title, Subtitle, Image, Progress} from './styles';
 import {storage} from '../../firebase';
+
+import {
+        Container,
+        Row,
+        FileInput,
+        Box,
+        Select,
+        Text,
+        Title,
+        Subtitle,
+        Image,
+        Progress
+    } from './styles';
 
 // util:
 // https://www.youtube.com/watch?v=8r1Pb6Ja90o
@@ -73,7 +85,7 @@ const FileUploader = () => {
                 <Text>Escolha uma imagem incrível para upar no Softwave!</Text>
                 
                 <Image src={url || "https://i.imgur.com/YTmPA0u.jpg"} alt="firebase-image"/>
-                {/*TODO*/}
+               
                 <Row>
                     <Subtitle>Categoria: </Subtitle>
                     <Select value={category} onChange={handleSelect}>

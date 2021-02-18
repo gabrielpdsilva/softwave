@@ -1,11 +1,16 @@
 import React, { useState, useEffect } from 'react';
-import {Container, CentralizedContent, Row, Select, Text} from './styles';
-
 import {storage} from '../../firebase';
-
 import Loader from 'react-loader-spinner';
 import Grid from '../../components/Grid';
 import COLORS from '../../styles/colors';
+import {
+    Container,
+    CentralizedContent,
+    Row,
+    Select,
+    Subtitle,
+    Text
+} from './styles';
 
 // util
 // https://stackoverflow.com/questions/64708353/how-to-display-all-the-images-from-firebase-storage-in-react
@@ -29,7 +34,6 @@ const Home = () => {
     }
     
     const getImageUrlsFromStorage = async () => {
-        //const result = await storage.ref("images/").listAll();
         const result = await storage.ref(`images/${category}/`).listAll();
 
         if(!storageHasImages(result)) {
@@ -92,7 +96,6 @@ const Home = () => {
                         color={COLORS.rosa}
                         height={100}
                         width={100}
-                        //timeout={1000} //1 sec
                     />
                 </CentralizedContent>
             </Container>
@@ -102,7 +105,7 @@ const Home = () => {
     return (
         <Container>
             <Row>
-                <Text>Categoria</Text>
+                <Subtitle>Categoria</Subtitle>
                 <Select value={category} onChange={handleSelect}>
                     <option value="cyberpunk">Cyberpunk</option>
                     <option value="doomerwave">Doomer Wave</option>

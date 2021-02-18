@@ -26,6 +26,10 @@ export const Image = styled.img`
     height: 30%;
 `;
 
+export const Title = styled.h1`
+    margin: 5px;
+`;
+
 export const Subtitle = styled.h2`
     margin-right: 10px;
     color: ${COLORS.preto};
@@ -50,10 +54,6 @@ export const Select = styled.select`
     option {
         background-color: ${COLORS.cinzaClaro};
     }
-`;
-
-export const Title = styled.h1`
-    margin: 5px;
 `;
 
 export const Box = styled.div`
