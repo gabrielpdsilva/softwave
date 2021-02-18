@@ -33,7 +33,6 @@ const Grid = ({urls}) => {
                     color={COLORS.rosa}
                     height={100}
                     width={100}
-                    //timeout={1000} //1 sec
                 />
         }
         </CustomGrid>
