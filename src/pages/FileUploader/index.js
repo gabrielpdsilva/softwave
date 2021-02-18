@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import WindowsButton from '../../components/WindowsButton';
-import {Container, Row, FileInput, Box} from './styles';
+import {Container, Row, FileInput, Box, Select, Text, Title, Subtitle, Image, Progress} from './styles';
 import {storage} from '../../firebase';
 
 // util:
@@ -69,27 +69,22 @@ const FileUploader = () => {
 
             <Box>
                 
-                <h1>Upar Imagem</h1>
-                <p>Escolha uma imagem incrível para upar no Softwave!</p>
+                <Title>Upar Imagem</Title>
+                <Text>Escolha uma imagem incrível para upar no Softwave!</Text>
                 
-                <img style={{padding: 30, width: '50%', height: '60%'}} src={url || "https://i.imgur.com/YTmPA0u.jpg"} alt="firebase-image"/>
-                
+                <Image src={url || "https://i.imgur.com/YTmPA0u.jpg"} alt="firebase-image"/>
                 {/*TODO*/}
-                <div style={{margin: 5}}>
-                
-                    <p>{category}</p>
-
-                    <select value={category} onChange={handleSelect}>
+                <Row>
+                    <Subtitle>Categoria: </Subtitle>
+                    <Select value={category} onChange={handleSelect}>
                         <option value="cyberpunk">Cyberpunk</option>
                         <option value="doomerwave">Doomer Wave</option>
                         <option value="synthwave">Synthwave</option>
                         <option selected value="vaporwave">Vaporwave</option>
-                    </select>
-                </div>
-
-                <Row>
-                    {!url && <progress value={progress} style={{marginLeft: 10, width: 250}} max="100"/>}
+                    </Select>
                 </Row>
+
+                {!url && <Progress value={progress} max="100"/>}
 
                 <Row>
                     <FileInput>
@@ -98,9 +93,6 @@ const FileUploader = () => {
 
                    <WindowsButton texto="Enviar" onPress={handleUpload}/>
                 </Row>
-
-               
-                
             </Box>
             
         </Container>
