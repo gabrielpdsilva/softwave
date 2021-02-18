@@ -8,7 +8,8 @@ const COLORS = {
     branco: '#ffffff',
     cinzaEscuro: '#808080',
     amarelo: '#fdfce4',
-    rosa: '#d685ff'
+    rosa: '#d685ff',
+    preto: '#000000',
 };
 
 export default COLORS;

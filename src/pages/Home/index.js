@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import {Container, CentralizedContent} from './styles';
+import {Container, CentralizedContent, Row, Select, Text} from './styles';
 
 import {storage} from '../../firebase';
 
@@ -21,7 +21,7 @@ const Home = () => {
     const [imagesLoading, setImagesLoading] = useState(true);
     const [imagesExist, setImagesExist] = useState(false);
 
-    const [category, setCategory] = useState("cyberpunk");
+    const [category, setCategory] = useState("vaporwave");
 
     const storageHasImages = (data) => {
         if(data.items.length > 0) return true;
@@ -34,6 +34,7 @@ const Home = () => {
 
         if(!storageHasImages(result)) {
             console.log("No images here...");
+            setImagesExist(false);
             return;
         }
         console.log("There are images!");
@@ -100,26 +101,22 @@ const Home = () => {
 
     return (
         <Container>
-            <CentralizedContent>
+            <Row>
+                <Text>Categoria</Text>
+                <Select value={category} onChange={handleSelect}>
+                    <option value="cyberpunk">Cyberpunk</option>
+                    <option value="doomerwave">Doomer Wave</option>
+                    <option value="synthwave">Synthwave</option>
+                    <option selected value="vaporwave">Vaporwave</option>
+                </Select>
+            </Row>
+
+            <CentralizedContent>   
             {
                 imagesExist ?
-
-                    <div>
-                        <div style={{margin: 5}}>
-                        
-                            <p>{category}</p>
-
-                            <select value={category} onChange={handleSelect}>
-                                <option value="cyberpunk">Cyberpunk</option>
-                                <option value="doomerwave">Doomer Wave</option>
-                                <option value="synthwave">Synthwave</option>
-                                <option selected value="vaporwave">Vaporwave</option>
-                            </select>
-                        </div>
-                        <Grid urls={urls}/> 
-                    </div>
+                    <Grid urls={urls}/> 
                 :
-                    <h1>Ainda não foram adicionadas imagens.</h1>         
+                    <Text>Ainda não foram adicionadas imagens.</Text>         
             }
             </CentralizedContent>
         </Container>
