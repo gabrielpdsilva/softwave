@@ -12,6 +12,10 @@ export const Container = styled.div`
     left: 0;
 `;
 
+export const Imagem = styled.img`
+    margin-left: 15px;
+`;
+
 export const Row = styled.div`
     display: flex;
     align-items: center;

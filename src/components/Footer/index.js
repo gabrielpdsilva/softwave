@@ -1,9 +1,11 @@
 import React, {useState} from 'react';
 import WindowsButton from '../WindowsButton';
-import {Container, Row, Data} from './styles';
+import {Container, Row, Data, Imagem} from './styles';
 import logo from '../../images/windows-logo.png';
 import transferIcon from '../../images/transfer.png';
 import helpIcon from '../../images/help.png';
+
+import { Link } from 'react-router-dom';
 
 // creditos pelos icones:
 // https://artage.io/en/image-48133
@@ -11,7 +13,6 @@ import helpIcon from '../../images/help.png';
 const Footer = () => {
 
     const anoAtual = new Date().getFullYear();
-    const [data, setData] = useState(anoAtual);
 
     const handleStart = () => alert("clicou em Start");
 
@@ -20,9 +21,13 @@ const Footer = () => {
             <Container>
                 <Row>
                     <WindowsButton imagem={logo} texto="Start" onPress={handleStart}/>
-                    <img src={transferIcon}/>
-                    <img src={helpIcon}/>
-                    <Data>{data}</Data>
+                    <Link to="/upar">
+                        <Imagem src={transferIcon}/>
+                    </Link>
+                    <Link to="/sobre">
+                        <Imagem src={helpIcon}/>
+                    </Link>
+                    <Data>{anoAtual}</Data>
                 </Row>
             </Container>
         </footer>
