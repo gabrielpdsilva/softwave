@@ -96,7 +96,7 @@ const FileUploader = () => {
                     </Select>
                 </Row>
 
-                {!url && <Progress value={progress} max="100"/>}
+                <Progress value={progress} max="100"/>
 
                 <Row>
                     <FileInput>
