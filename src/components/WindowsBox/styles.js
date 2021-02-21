@@ -40,9 +40,14 @@ export const WindowBody = styled.div`
 `;
 
 export const Button = styled.button`
-
-    :active {
+    
+    :not(:disabled):active {  
         border-color: ${COLORS.cinzaEscuro} ${COLORS.branco} ${COLORS.branco} ${COLORS.cinzaEscuro};
+    }
+
+    :disabled {
+        text-shadow: 1px 1px 0 ${COLORS.branco};
+        color: ${COLORS.cinzaEscuro};
     }
 
     width: 20px;
@@ -52,14 +57,7 @@ export const Button = styled.button`
     border-color: ${COLORS.branco} ${COLORS.cinzaEscuro} ${COLORS.cinzaEscuro} ${COLORS.branco};
 `;
 
-export const DisabledButton = styled.button`
 
-    color: ${COLORS.cinzaEscuro};
-    width: 20px;
-    margin-left: 4px;
-    background-color: ${COLORS.cinzaClaro};
-    border-color: ${COLORS.branco} ${COLORS.cinzaEscuro} ${COLORS.cinzaEscuro} ${COLORS.branco};
-`;
 
 export const Text = styled.p`
 `;

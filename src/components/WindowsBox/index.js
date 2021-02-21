@@ -1,7 +1,9 @@
 import React from 'react';
-import {Window, BlueDiv, Row, Logo, Title, Button, WindowBody, Text, DisabledButton} from './styles';
+import {Window, BlueDiv, Row, Logo, Title, Button, WindowBody, Text} from './styles';
 import { useNavigate } from 'react-router-dom';
 
+// util:
+// https://jdan.github.io/98.css/
 
 const WindowsBox = (props) => {
     const navigate = useNavigate();
@@ -14,7 +16,7 @@ const WindowsBox = (props) => {
                         <Title>{props.title}</Title>
                     <div>
                         <Button onClick={() => navigate("/")}>_</Button>
-                        <DisabledButton disabled>X</DisabledButton>
+                        <Button disabled>X</Button>
                     </div>
                 </Row>
             </BlueDiv>
