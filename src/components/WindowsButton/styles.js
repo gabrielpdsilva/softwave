@@ -15,5 +15,9 @@ export const Botao = styled.button`
     border-width: 1px;
     background-color: ${COLORS.cinzaClaro};
     border-color: ${COLORS.branco} ${COLORS.cinzaEscuro} ${COLORS.cinzaEscuro} ${COLORS.branco};
+    
+    :active {
+        border-color: ${COLORS.cinzaEscuro} ${COLORS.branco} ${COLORS.branco} ${COLORS.cinzaEscuro};
+    }
 
 `;

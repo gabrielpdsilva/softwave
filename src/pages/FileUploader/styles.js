@@ -59,18 +59,24 @@ export const Row = styled.div`
 export const Select = styled.select`
     border: solid;
     border-width: 2px;
-    border-color: ${COLORS.branco} ${COLORS.cinzaEscuro} ${COLORS.cinzaEscuro} ${COLORS.branco};
-    background-color: ${COLORS.cinzaClaro};
+    border-color: ${COLORS.cinzaEscuro} ${COLORS.branco} ${COLORS.branco} ${COLORS.cinzaEscuro};
+    background-color: ${COLORS.branco};
+
+    //-webkit-appearance: none;
+    //-moz-appearance: none;
 
     option {
-        background-color: ${COLORS.cinzaClaro};
+        background-color: ${COLORS.branco};
     }
 `;
 
 export const Box = styled.div`
+    display: block;
 
     box-sizing: border-box;
     max-width: 1000px;
+    max-height: 1000px;
+    height: 500px;
     width: 500px;
     max-height: 75%;
     min-height: 300px;
@@ -82,7 +88,7 @@ export const Box = styled.div`
     background-color: ${COLORS.cinzaClaro};
 //    margin: auto;
 //    width: 30%;
-    height: 60%;
+//    height: 60%;
     text-align: center;
     margin-bottom: 100px;
 `;

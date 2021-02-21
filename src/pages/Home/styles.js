@@ -27,11 +27,11 @@ export const Text = styled.p`
 export const Select = styled.select`
     border: solid;
     border-width: 2px;
-    border-color: ${COLORS.branco} ${COLORS.cinzaEscuro} ${COLORS.cinzaEscuro} ${COLORS.branco};
-    background-color: ${COLORS.cinzaClaro};
+    border-color: ${COLORS.cinzaEscuro} ${COLORS.branco} ${COLORS.branco} ${COLORS.cinzaEscuro};
+    background-color: ${COLORS.branco};
 
     option {
-        background-color: ${COLORS.cinzaClaro};
+        background-color: ${COLORS.branco};
     }
 `;
 
