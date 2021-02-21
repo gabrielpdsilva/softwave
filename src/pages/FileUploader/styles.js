@@ -6,7 +6,7 @@ import COLORS from '../../styles/colors';
 // https://blog.campvanilla.com/building-a-progress-bar-component-using-reactjs-styled-components-516dc2c3075a
 
 export const Container = styled.div`
-    height: 90vh;
+    height: 50vh;
     display: flex;
     align-items: center;
     justify-content: center;

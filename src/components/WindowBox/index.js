@@ -1,5 +1,5 @@
 import React from 'react';
-import {Window, BlueDiv, Row, Texto, Botao, WindowBody, Text} from './styles';
+import {Window, BlueDiv, Row, Texto, Botao, WindowBody, Text, DisabledButton} from './styles';
 import { useNavigate } from 'react-router-dom';
 
 const WindowBox = (props) => {
@@ -12,8 +12,7 @@ const WindowBox = (props) => {
                     <Texto>{props.title}</Texto>
                     <div>
                         <Botao onClick={() => navigate("/")}>_</Botao>
-                        <Botao>X</Botao>
-                        <Botao>X</Botao>
+                        <DisabledButton disabled>X</DisabledButton>
                     </div>
                 </Row>
             </BlueDiv>

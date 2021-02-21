@@ -44,7 +44,16 @@ export const Botao = styled.button`
     width: 20px;
     margin-left: 4px;
     background-color: ${COLORS.cinzaClaro};
-    box-shadow: 1px 1px;
+    
+    border-color: ${COLORS.branco} ${COLORS.cinzaEscuro} ${COLORS.cinzaEscuro} ${COLORS.branco};
+`;
+
+export const DisabledButton = styled.button`
+
+    color: ${COLORS.cinzaEscuro};
+    width: 20px;
+    margin-left: 4px;
+    background-color: ${COLORS.cinzaClaro};
     border-color: ${COLORS.branco} ${COLORS.cinzaEscuro} ${COLORS.cinzaEscuro} ${COLORS.branco};
 `;
 
