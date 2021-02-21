@@ -1,12 +1,5 @@
 import React, {useEffect} from 'react';
-import { Link } from 'react-router-dom';
-import {Container,
-    Window,
-    BlueDiv,
-    Texto,
-    Row,
-    Botao,
-    WindowBody,
+import {Container
 } from './styles';
 
 // util
@@ -21,24 +14,6 @@ const About = () => {
     return (
         <Container>
             
-            <Window>
-                <BlueDiv>
-                    <Row>
-                        <Texto>Título da Janela</Texto>
-                        <div>
-                            <Botao>X</Botao>
-                            <Botao>X</Botao>
-                            <Botao>X</Botao>
-                        </div>
-                    </Row>
-                </BlueDiv>
-                <WindowBody>
-                    <p>Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum</p>
-                    <p>Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum</p>
-                    <p>Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum</p>
-                    <p>Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum</p>
-                </WindowBody>
-            </Window>
             <h1>Sobre...</h1>
             <p>Créditos pelos ícones:</p>
            

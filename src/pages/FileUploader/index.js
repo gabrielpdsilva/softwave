@@ -1,5 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import { Window } from '../../components/MessageWindow/styles';
+import WindowBox from '../../components/WindowBox';
 import WindowsButton from '../../components/WindowsButton';
 import {storage} from '../../firebase';
 
@@ -80,15 +81,12 @@ const FileUploader = () => {
     return (
         <Container>
 
-            <Box>
-                
+            <WindowBox title="Upar Imagem">
                 <Title>Upar Imagem</Title>
                 <Text>Escolha uma imagem incrível para upar no Softwave!</Text>
-                
-                <Image src={url || "https://i.imgur.com/YTmPA0u.jpg"} alt="firebase-image"/>
-               
+
                 <Row>
-                    <Subtitle>Categoria: </Subtitle>
+                    <p>Categoria: </p>
                     <Select value={category} onChange={handleSelect}>
                         <option value="cyberpunk">Cyberpunk</option>
                         <option value="doomerwave">Doomer Wave</option>
@@ -96,9 +94,13 @@ const FileUploader = () => {
                         <option selected value="vaporwave">Vaporwave</option>
                     </Select>
                 </Row>
-
+                <Image src={url || "https://i.imgur.com/YTmPA0u.jpg"} alt="firebase-image"/>
+               
+            
+                <Row>
+                   <p> Progresso:</p>
                 <Progress value={progress} max="100"/>
-
+                </Row>
                 <Row>
                     <FileInput>
                         <input type="file" onChange={handleChange}/>
@@ -106,7 +108,8 @@ const FileUploader = () => {
 
                    <WindowsButton title="Enviar" onPress={handleUpload}/>
                 </Row>
-            </Box>
+
+            </WindowBox>
             
         </Container>
     )
