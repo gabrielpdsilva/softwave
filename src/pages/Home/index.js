@@ -117,7 +117,7 @@ const Home = () => {
             <CentralizedContent>   
             {
                 imagesExist ?
-                    <Grid urls={urls}/> 
+                    <Grid urls={urls}/>
                 :
                     <Text>Ainda não foram adicionadas imagens.</Text>         
             }

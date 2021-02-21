@@ -1,4 +1,5 @@
 import React, {useState, useEffect} from 'react';
+import { Window } from '../../components/MessageWindow/styles';
 import WindowsButton from '../../components/WindowsButton';
 import {storage} from '../../firebase';
 
@@ -103,7 +104,7 @@ const FileUploader = () => {
                         <input type="file" onChange={handleChange}/>
                     </FileInput>
 
-                   <WindowsButton texto="Enviar" onPress={handleUpload}/>
+                   <WindowsButton title="Enviar" onPress={handleUpload}/>
                 </Row>
             </Box>
             

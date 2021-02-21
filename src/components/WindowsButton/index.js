@@ -1,13 +1,13 @@
 import React from 'react';
 import {Botao} from './styles';
-const WindowsButton = ({onPress, imagem, texto}) => {
+const WindowsButton = ({onPress, image, title}) => {
 
     return(
         <Botao onClick={onPress}>               
                 {
-                    imagem && <img src={imagem} style={{width: 20, height: 15, marginRight: 3}} alt="Logo"/>
+                    image && <img src={image} style={{width: 20, height: 15, marginRight: 3}} alt="Logo"/>
                 }
-                {texto}
+                {title}
         </Botao>
     );
 }

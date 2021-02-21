@@ -20,6 +20,7 @@ const About = () => {
 
     return (
         <Container>
+            
             <Window>
                 <BlueDiv>
                     <Row>
