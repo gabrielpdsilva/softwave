@@ -1,7 +1,7 @@
 import React from 'react';
 import {Window, BlueDiv, Row, Title, Button, WindowBody, Text} from './styles';
 
-const MessageWindow = ({title, content}) => {
+const WindowsMessage = ({title, content}) => {
 
     return (
         <Window>
@@ -20,4 +20,4 @@ const MessageWindow = ({title, content}) => {
     )
 }
 
-export default MessageWindow;
+export default WindowsMessage;

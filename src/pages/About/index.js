@@ -1,5 +1,5 @@
 import React, {useEffect} from 'react';
-import WindowBox from '../../components/WindowBox';
+import WindowsBox from '../../components/WindowsBox';
 import {Container} from './styles';
 import helpIcon from '../../images/help.png';
 
@@ -15,11 +15,11 @@ const About = () => {
     return (
         <Container>
 
-            <WindowBox logo={helpIcon} title="Sobre">
+            <WindowsBox logo={helpIcon} title="Sobre">
 
                 <p>Créditos pelos ícones: <a target="_blank" href="https://artage.io/en">ARTAGE</a></p>
            
-            </WindowBox>
+            </WindowsBox>
             
         </Container>
     );

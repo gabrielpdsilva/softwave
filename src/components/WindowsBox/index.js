@@ -3,7 +3,7 @@ import {Window, BlueDiv, Row, Logo, Title, Button, WindowBody, Text, DisabledBut
 import { useNavigate } from 'react-router-dom';
 
 
-const WindowBox = (props) => {
+const WindowsBox = (props) => {
     const navigate = useNavigate();
     
     return (
@@ -25,4 +25,4 @@ const WindowBox = (props) => {
     )
 }
 
-export default WindowBox;
+export default WindowsBox;

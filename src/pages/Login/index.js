@@ -1,6 +1,6 @@
 import React, {useEffect} from 'react';
-import MessageWindow from '../../components/MessageWindow';
-import WindowBox from '../../components/WindowBox';
+import WindowsMessage from '../../components/WindowsMessage';
+import WindowsBox from '../../components/WindowsBox';
 
 const Login = () => {
 
@@ -10,13 +10,13 @@ const Login = () => {
 
     return (
         <div style={{justifyContent: 'center', display: 'flex'}}>    
-            <MessageWindow title="Meu título" content="Obrigado. Se você curtiu, é nozes."/>
-            <WindowBox title="Upar Imagem">
+            <WindowsMessage title="Meu título" content="Obrigado. Se você curtiu, é nozes."/>
+            <WindowsBox title="Upar Imagem">
                 <select>
                     <option>aaaOi</option>
                     <option>aaaOi</option>
                 </select>
-            </WindowBox>
+            </WindowsBox>
         </div>
     );
 }

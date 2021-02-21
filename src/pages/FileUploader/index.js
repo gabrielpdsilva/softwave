@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from 'react';
-import WindowBox from '../../components/WindowBox';
+import WindowsBox from '../../components/WindowsBox';
 import WindowsButton from '../../components/WindowsButton';
 import {storage} from '../../firebase';
 import TransferIcon from '../../images/transfer.png';
@@ -82,7 +82,7 @@ const FileUploader = () => {
     return (
         <Container>
 
-            <WindowBox logo={TransferIcon} title="Upar Imagem">
+            <WindowsBox logo={TransferIcon} title="Upar Imagem">
                 <CentralizedContent>
 
                     <Title>Upar Imagem</Title>
@@ -112,9 +112,8 @@ const FileUploader = () => {
                     </Row>
                 </CentralizedContent>
 
-            </WindowBox>
-
-            
+            </WindowsBox>
+   
         </Container>
     )
 }

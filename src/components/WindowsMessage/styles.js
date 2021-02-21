@@ -13,24 +13,20 @@ export const Window = styled.div`
 
 `;
 
-export const Logo = styled.img`
-    width: 20px;
-    height: 20px;
-`;
-
 export const BlueDiv = styled.div`
     background-image: linear-gradient(to right, ${COLORS.azulEscuro}, ${COLORS.azulClaro});
     //background-color: ${COLORS.azulEscuro};
     padding: 3px;
 `;
 
-export const Title = styled.div`
+export const Title = styled.p`
     color: ${COLORS.branco};
 `;
 
 export const Row = styled.div`
     display: flex;
     align-items: center;
+    justify-content: center;
     justify-content: space-between;
 `;
 
@@ -48,16 +44,7 @@ export const Button = styled.button`
     width: 20px;
     margin-left: 4px;
     background-color: ${COLORS.cinzaClaro};
-    
-    border-color: ${COLORS.branco} ${COLORS.cinzaEscuro} ${COLORS.cinzaEscuro} ${COLORS.branco};
-`;
-
-export const DisabledButton = styled.button`
-
-    color: ${COLORS.cinzaEscuro};
-    width: 20px;
-    margin-left: 4px;
-    background-color: ${COLORS.cinzaClaro};
+    box-shadow: 1px 1px;
     border-color: ${COLORS.branco} ${COLORS.cinzaEscuro} ${COLORS.cinzaEscuro} ${COLORS.branco};
 `;
 
