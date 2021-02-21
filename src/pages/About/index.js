@@ -1,7 +1,7 @@
 import React, {useEffect} from 'react';
 import WindowBox from '../../components/WindowBox';
-import {Container
-} from './styles';
+import {Container} from './styles';
+import helpIcon from '../../images/help.png';
 
 // util
 // https://jdan.github.io/98.css/
@@ -15,7 +15,7 @@ const About = () => {
     return (
         <Container>
 
-            <WindowBox title="Sobre">
+            <WindowBox logo={helpIcon} title="Sobre">
 
                 <p>Créditos pelos ícones: <a target="_blank" href="https://artage.io/en">ARTAGE</a></p>
            

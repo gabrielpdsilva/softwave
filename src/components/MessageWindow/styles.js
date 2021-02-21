@@ -19,7 +19,7 @@ export const BlueDiv = styled.div`
     padding: 3px;
 `;
 
-export const Texto = styled.div`
+export const Title = styled.div`
     color: ${COLORS.branco};
 `;
 
@@ -35,7 +35,7 @@ export const WindowBody = styled.div`
     margin: 10px;
 `;
 
-export const Botao = styled.button`
+export const Button = styled.button`
 
     :active {
         border-color: ${COLORS.cinzaEscuro} ${COLORS.branco} ${COLORS.branco} ${COLORS.cinzaEscuro};

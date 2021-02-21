@@ -2,6 +2,7 @@ import React, {useState, useEffect} from 'react';
 import WindowBox from '../../components/WindowBox';
 import WindowsButton from '../../components/WindowsButton';
 import {storage} from '../../firebase';
+import TransferIcon from '../../images/transfer.png';
 
 import {
         Container,
@@ -81,7 +82,7 @@ const FileUploader = () => {
     return (
         <Container>
 
-            <WindowBox title="Upar Imagem">
+            <WindowBox logo={TransferIcon} title="Upar Imagem">
                 <CentralizedContent>
 
                     <Title>Upar Imagem</Title>

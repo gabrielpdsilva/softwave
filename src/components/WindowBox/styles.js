@@ -13,20 +13,24 @@ export const Window = styled.div`
 
 `;
 
+export const Logo = styled.img`
+    width: 20px;
+    height: 20px;
+`;
+
 export const BlueDiv = styled.div`
     background-image: linear-gradient(to right, ${COLORS.azulEscuro}, ${COLORS.azulClaro});
     //background-color: ${COLORS.azulEscuro};
     padding: 3px;
 `;
 
-export const Texto = styled.div`
+export const Title = styled.div`
     color: ${COLORS.branco};
 `;
 
 export const Row = styled.div`
     display: flex;
     align-items: center;
-    justify-content: center;
     justify-content: space-between;
 `;
 
@@ -35,7 +39,7 @@ export const WindowBody = styled.div`
     margin: 10px;
 `;
 
-export const Botao = styled.button`
+export const Button = styled.button`
 
     :active {
         border-color: ${COLORS.cinzaEscuro} ${COLORS.branco} ${COLORS.branco} ${COLORS.cinzaEscuro};

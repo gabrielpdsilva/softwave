@@ -1,6 +1,7 @@
 import React from 'react';
-import {Window, BlueDiv, Row, Texto, Botao, WindowBody, Text, DisabledButton} from './styles';
+import {Window, BlueDiv, Row, Logo, Title, Button, WindowBody, Text, DisabledButton} from './styles';
 import { useNavigate } from 'react-router-dom';
+
 
 const WindowBox = (props) => {
     const navigate = useNavigate();
@@ -9,9 +10,10 @@ const WindowBox = (props) => {
         <Window>
             <BlueDiv>
                 <Row>
-                    <Texto>{props.title}</Texto>
+                        <Logo src={props.logo}/>
+                        <Title>{props.title}</Title>
                     <div>
-                        <Botao onClick={() => navigate("/")}>_</Botao>
+                        <Button onClick={() => navigate("/")}>_</Button>
                         <DisabledButton disabled>X</DisabledButton>
                     </div>
                 </Row>

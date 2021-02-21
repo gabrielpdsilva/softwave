@@ -1,5 +1,5 @@
 import React from 'react';
-import {Window, BlueDiv, Row, Texto, Botao, WindowBody, Text} from './styles';
+import {Window, BlueDiv, Row, Title, Button, WindowBody, Text} from './styles';
 
 const MessageWindow = ({title, content}) => {
 
@@ -7,9 +7,9 @@ const MessageWindow = ({title, content}) => {
         <Window>
             <BlueDiv>
                 <Row>
-                    <Texto>{title}</Texto>
+                    <Title>{title}</Title>
                     <div>
-                        <Botao>X</Botao>
+                        <Button>X</Button>
                     </div>
                 </Row>
             </BlueDiv>
