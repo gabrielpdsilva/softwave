@@ -1,4 +1,5 @@
 import React, {useEffect} from 'react';
+import WindowBox from '../../components/WindowBox';
 import {Container
 } from './styles';
 
@@ -13,11 +14,13 @@ const About = () => {
 
     return (
         <Container>
-            
-            <h1>Sobre...</h1>
-            <p>Créditos pelos ícones:</p>
+
+            <WindowBox title="Sobre">
+
+                <p>Créditos pelos ícones: <a target="_blank" href="https://artage.io/en">ARTAGE</a></p>
            
-            <a target="_blank" href="https://artage.io/en">ARTAGE</a>
+            </WindowBox>
+            
         </Container>
     );
 }

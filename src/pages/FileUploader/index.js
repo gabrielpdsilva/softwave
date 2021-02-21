@@ -1,5 +1,4 @@
 import React, {useState, useEffect} from 'react';
-import { Window } from '../../components/MessageWindow/styles';
 import WindowBox from '../../components/WindowBox';
 import WindowsButton from '../../components/WindowsButton';
 import {storage} from '../../firebase';
@@ -14,7 +13,8 @@ import {
         Title,
         Subtitle,
         Image,
-        Progress
+        Progress,
+        CentralizedContent
     } from './styles';
 
 // util:
@@ -82,34 +82,37 @@ const FileUploader = () => {
         <Container>
 
             <WindowBox title="Upar Imagem">
-                <Title>Upar Imagem</Title>
-                <Text>Escolha uma imagem incrível para upar no Softwave!</Text>
+                <CentralizedContent>
 
-                <Row>
-                    <p>Categoria: </p>
-                    <Select value={category} onChange={handleSelect}>
-                        <option value="cyberpunk">Cyberpunk</option>
-                        <option value="doomerwave">Doomer Wave</option>
-                        <option value="synthwave">Synthwave</option>
-                        <option selected value="vaporwave">Vaporwave</option>
-                    </Select>
-                </Row>
-                <Image src={url || "https://i.imgur.com/YTmPA0u.jpg"} alt="firebase-image"/>
-               
-            
-                <Row>
-                   <p> Progresso:</p>
-                <Progress value={progress} max="100"/>
-                </Row>
-                <Row>
-                    <FileInput>
-                        <input type="file" onChange={handleChange}/>
-                    </FileInput>
+                    <Title>Upar Imagem</Title>
+                    <Text>Escolha uma imagem incrível para upar no Softwave!</Text>
 
-                   <WindowsButton title="Enviar" onPress={handleUpload}/>
-                </Row>
+                    <Row>
+                        <p>Categoria: </p>
+                        <Select value={category} onChange={handleSelect}>
+                            <option value="cyberpunk">Cyberpunk</option>
+                            <option value="doomerwave">Doomer Wave</option>
+                            <option value="synthwave">Synthwave</option>
+                            <option selected value="vaporwave">Vaporwave</option>
+                        </Select>
+                    </Row>
+                    <Image src={url || "https://i.imgur.com/YTmPA0u.jpg"} alt="firebase-image"/>
+                
+                    <Row>
+                    <p> Progresso:</p>
+                    <Progress value={progress} max="100"/>
+                    </Row>
+                    <Row>
+                        <FileInput>
+                            <input type="file" onChange={handleChange}/>
+                        </FileInput>
+
+                    <WindowsButton title="Enviar" onPress={handleUpload}/>
+                    </Row>
+                </CentralizedContent>
 
             </WindowBox>
+
             
         </Container>
     )

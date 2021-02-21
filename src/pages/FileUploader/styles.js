@@ -31,6 +31,10 @@ export const Progress = styled.progress`
     }
 `;
 
+export const CentralizedContent = styled.div`
+    text-align: center;
+`;
+
 export const Image = styled.img`
     padding: 30px;
     width: 30%;
