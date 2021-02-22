@@ -3,8 +3,6 @@ import {Window, Select, BlueDiv, Row, Logo, Title, Button, WindowBody, GrayDiv, 
 
 const WindowsGallery = (props) => {
 
-    
-
     return (
         <Window>
             <BlueDiv>

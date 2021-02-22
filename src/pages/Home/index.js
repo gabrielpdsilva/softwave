@@ -5,9 +5,6 @@ import Grid from '../../components/Grid';
 import COLORS from '../../styles/colors';
 import {
     Container,
-    CentralizedContent,
-    Row,
-    Select,
     Subtitle,
     Text
 } from './styles';
@@ -92,40 +89,31 @@ const Home = () => {
     if(imagesLoading) {
         return (
             <Container>
-                <CentralizedContent>
                     <Loader
                         type="Oval"
                         color={COLORS.rosa}
                         height={100}
                         width={100}
                     />
-                </CentralizedContent>
             </Container>
         );
     }
 
     return (
-        <Container>
-            <Row>
-                <Subtitle>Categoria</Subtitle>
-                <Select value={category} onChange={handleSelect}>
-                    <option value="cyberpunk">Cyberpunk</option>
-                    <option value="doomerwave">Doomer Wave</option>
-                    <option value="synthwave">Synthwave</option>
-                    <option selected value="vaporwave">Vaporwave</option>
-                </Select>
-            </Row>
-
-            <CentralizedContent>   
+        <Container>   
             {
                 imagesExist ?
-                    <WindowsGallery icon={folderIcon} title="Exploring - Images\Categoria" category={category} onPress={handleSelect}>
+                    <WindowsGallery
+                        icon={folderIcon}
+                        title="Exploring - Images\Categoria"
+                        category={category}
+                        onPress={handleSelect}
+                    >
                         <Grid urls={urls}/>
                     </WindowsGallery>
                 :
                     <Text>Ainda não foram adicionadas imagens.</Text>         
             }
-            </CentralizedContent>
         </Container>
     );
 }
