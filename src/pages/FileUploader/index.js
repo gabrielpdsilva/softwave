@@ -2,7 +2,7 @@ import React, {useState, useEffect} from 'react';
 import WindowsBox from '../../components/WindowsBox';
 import WindowsButton from '../../components/WindowsButton';
 import {storage} from '../../firebase';
-import TransferIcon from '../../images/transfer.png';
+import transferIcon from '../../images/transfer.png';
 
 import {
         Container,
@@ -82,7 +82,7 @@ const FileUploader = () => {
     return (
         <Container>
 
-            <WindowsBox logo={TransferIcon} title="Upar Imagem">
+            <WindowsBox logo={transferIcon} title="Upar Imagem">
                 <CentralizedContent>
 
                     <Title>Upar Imagem</Title>

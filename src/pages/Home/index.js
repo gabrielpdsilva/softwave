@@ -11,6 +11,8 @@ import {
     Subtitle,
     Text
 } from './styles';
+import WindowsGallery from '../../components/WindowsGallery';
+import folderIcon from '../../images/folder.png';
 
 // util
 // https://stackoverflow.com/questions/64708353/how-to-display-all-the-images-from-firebase-storage-in-react
@@ -117,7 +119,9 @@ const Home = () => {
             <CentralizedContent>   
             {
                 imagesExist ?
-                    <Grid urls={urls}/>
+                    <WindowsGallery icon={folderIcon} title="Exploring - Images\Categoria" category={category}>
+                        <Grid urls={urls}/>
+                    </WindowsGallery>
                 :
                     <Text>Ainda não foram adicionadas imagens.</Text>         
             }

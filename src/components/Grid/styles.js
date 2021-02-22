@@ -19,11 +19,7 @@ export const CustomGrid = styled.div`
 `;
 
 export const Image = styled.img`
-    border-style: solid;
-    background-color: ${COLORS.cinzaClaro};
-    padding: 10px;
-    border-width: 1px;
-    border-color: ${COLORS.branco} ${COLORS.cinzaEscuro} ${COLORS.cinzaEscuro} ${COLORS.branco};
+    
     width: 65%;
     height: auto;
 `;
