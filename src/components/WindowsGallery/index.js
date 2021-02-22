@@ -3,12 +3,7 @@ import {Window, Select, BlueDiv, Row, Logo, Title, Button, WindowBody, GrayDiv, 
 
 const WindowsGallery = (props) => {
 
-    const [category, setCategory] = useState(props.category);
-
-    const handleSelect = (event) => {
-        console.log('ai')
-        setCategory(event.target.value);
-    }
+    
 
     return (
         <Window>
@@ -30,7 +25,7 @@ const WindowsGallery = (props) => {
             </GrayDiv>
             <GrayDiv>
                 Categoria
-                <Select value={props.category} onChange={handleSelect}>
+                <Select value={props.category} onChange={props.onPress}>
                     <option value="cyberpunk">Cyberpunk</option>
                     <option value="doomerwave">Doomer Wave</option>
                     <option value="synthwave">Synthwave</option>

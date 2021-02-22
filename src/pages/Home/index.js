@@ -119,7 +119,7 @@ const Home = () => {
             <CentralizedContent>   
             {
                 imagesExist ?
-                    <WindowsGallery icon={folderIcon} title="Exploring - Images\Categoria" category={category}>
+                    <WindowsGallery icon={folderIcon} title="Exploring - Images\Categoria" category={category} onPress={handleSelect}>
                         <Grid urls={urls}/>
                     </WindowsGallery>
                 :

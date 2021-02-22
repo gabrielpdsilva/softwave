@@ -48,7 +48,7 @@ export const Select = styled.select`
     border-width: 2px;
     border-color: ${COLORS.cinzaEscuro} ${COLORS.branco} ${COLORS.branco} ${COLORS.cinzaEscuro};
     background-color: ${COLORS.branco};
-    width: 94%;
+    width: 92%;
 
     option {
         background-color: ${COLORS.branco};
