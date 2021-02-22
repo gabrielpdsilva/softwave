@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import COLORS from '../../styles/colors'
 
-export const Botao = styled.button`
+export const Button = styled.button`
     // util:
     // https://codepen.io/supember/pen/BKmgNZ
     
@@ -20,4 +20,10 @@ export const Botao = styled.button`
         border-color: ${COLORS.cinzaEscuro} ${COLORS.branco} ${COLORS.branco} ${COLORS.cinzaEscuro};
     }
 
+`;
+
+export const Icon = styled.img`
+    width: 20px;
+    height: 15px;
+    margin-right: 3px;
 `;

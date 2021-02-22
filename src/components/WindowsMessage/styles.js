@@ -13,7 +13,7 @@ export const Window = styled.div`
 
 `;
 
-export const BlueDiv = styled.div`
+export const BlueLine = styled.div`
     background-image: linear-gradient(to right, ${COLORS.azulEscuro}, ${COLORS.azulClaro});
     //background-color: ${COLORS.azulEscuro};
     padding: 3px;

@@ -13,15 +13,17 @@ export const Window = styled.div`
 
 `;
 
-export const Logo = styled.img`
+export const Icon = styled.img`
     width: 20px;
     height: 20px;
 `;
 
-export const BlueDiv = styled.div`
+export const BlueLine = styled.div`
     background-image: linear-gradient(to right, ${COLORS.azulEscuro}, ${COLORS.azulClaro});
     //background-color: ${COLORS.azulEscuro};
     padding: 3px;
+    justify-content: space-between;
+    display: flex;
 `;
 
 export const Title = styled.p`

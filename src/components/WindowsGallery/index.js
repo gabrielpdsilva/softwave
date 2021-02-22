@@ -1,20 +1,20 @@
-import React, {useState} from 'react';
-import {Window, Select, BlueDiv, Row, Logo, Title, Button, WindowBody, GrayDiv, Text} from './styles';
+import React from 'react';
+import {Window, Select, BlueLine, Row, Icon, Title, Button, WindowBody, GrayDiv, Text} from './styles';
 
 const WindowsGallery = (props) => {
 
     return (
         <Window>
-            <BlueDiv>
-                <Row>
-                        <Logo src={props.icon}/>
-                        <Title>{props.title}</Title>
-                    <div>
-                        <Button disabled>_</Button>
-                        <Button disabled>X</Button>
-                    </div>
-                </Row>
-            </BlueDiv>
+            <BlueLine>
+                <div style={{justifyContent: 'left', display: 'flex'}}>
+                    <Icon src={props.icon}/>
+                    <Title>{props.title}</Title>
+                </div>
+                <div>
+                    <Button disabled>_</Button>
+                    <Button disabled>X</Button>
+                </div>
+            </BlueLine>
             <GrayDiv>
                 <p>File</p>
                 <p>Edit</p>

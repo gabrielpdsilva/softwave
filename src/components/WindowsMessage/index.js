@@ -1,18 +1,18 @@
 import React from 'react';
-import {Window, BlueDiv, Row, Title, Button, WindowBody, Text} from './styles';
+import {Window, BlueLine, Row, Title, Button, WindowBody, Text} from './styles';
 
 const WindowsMessage = ({title, content}) => {
 
     return (
         <Window>
-            <BlueDiv>
+            <BlueLine>
                 <Row>
                     <Title>{title}</Title>
                     <div>
                         <Button>X</Button>
                     </div>
                 </Row>
-            </BlueDiv>
+            </BlueLine>
             <WindowBody>
                 <Text>{content}</Text>
             </WindowBody>

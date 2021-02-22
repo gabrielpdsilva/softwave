@@ -1,14 +1,14 @@
 import React from 'react';
-import {Botao} from './styles';
+import {Button, Icon} from './styles';
 const WindowsButton = ({onPress, image, title}) => {
 
     return(
-        <Botao onClick={onPress}>               
+        <Button onClick={onPress}>               
                 {
-                    image && <img src={image} style={{width: 20, height: 15, marginRight: 3}} alt="Logo"/>
+                    image && <Icon src={image} alt="Logo"/>
                 }
                 {title}
-        </Botao>
+        </Button>
     );
 }
 
