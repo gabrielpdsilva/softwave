@@ -82,7 +82,7 @@ const FileUploader = () => {
     return (
         <Container>
 
-            <WindowsBox logo={transferIcon} title="Upar Imagem">
+            <WindowsBox icon={transferIcon} title="Upar Imagem">
                 <CentralizedContent>
 
                     <Title>Upar Imagem</Title>

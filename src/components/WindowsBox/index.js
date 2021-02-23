@@ -1,5 +1,5 @@
 import React from 'react';
-import {Window, BlueLine, Row, Icon, Title, Button, WindowBody, Text} from './styles';
+import {Window, BlueLine, Icon, Title, Button, WindowBody} from './styles';
 import { useNavigate } from 'react-router-dom';
 
 // util:
@@ -11,14 +11,14 @@ const WindowsBox = (props) => {
     return (
         <Window>
             <BlueLine>
-                <Row>
-                        <Icon src={props.logo}/>
-                        <Title>{props.title}</Title>
-                    <div>
-                        <Button onClick={() => navigate("/")}>_</Button>
-                        <Button disabled>X</Button>
-                    </div>
-                </Row>
+                <div style={{justifyContent: 'left', display: 'flex'}}>
+                    <Icon src={props.icon}/>
+                    <Title>{props.title}</Title>
+                </div>
+                <div>
+                    <Button disabled>_</Button>
+                    <Button disabled>X</Button>
+                </div>
             </BlueLine>
             <WindowBody>
                 {props.children}

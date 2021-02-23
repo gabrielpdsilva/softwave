@@ -15,10 +15,8 @@ const About = () => {
     return (
         <Container>
 
-            <WindowsBox logo={helpIcon} title="Sobre">
-
+            <WindowsBox icon={helpIcon} title="Sobre">
                 <p>Créditos pelos ícones: <a target="_blank" href="https://artage.io/en">ARTAGE</a></p>
-           
             </WindowsBox>
             
         </Container>

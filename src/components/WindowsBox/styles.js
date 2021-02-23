@@ -22,16 +22,12 @@ export const BlueLine = styled.div`
     background-image: linear-gradient(to right, ${COLORS.azulEscuro}, ${COLORS.azulClaro});
     //background-color: ${COLORS.azulEscuro};
     padding: 3px;
+    justify-content: space-between;
+    display: flex;
 `;
 
 export const Title = styled.p`
     color: ${COLORS.branco};
-`;
-
-export const Row = styled.div`
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
 `;
 
 export const WindowBody = styled.div`
@@ -55,9 +51,4 @@ export const Button = styled.button`
     background-color: ${COLORS.cinzaClaro};
     
     border-color: ${COLORS.branco} ${COLORS.cinzaEscuro} ${COLORS.cinzaEscuro} ${COLORS.branco};
-`;
-
-
-
-export const Text = styled.p`
 `;
