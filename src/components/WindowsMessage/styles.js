@@ -2,13 +2,14 @@ import styled from 'styled-components';
 import COLORS from '../../styles/colors'
 
 export const Window = styled.div`
-    width: 30%;
+    width: 50%;
     background-color: ${COLORS.cinzaClaro};
     border: solid;
     border-width: 2px;
     border-color: ${COLORS.branco} ${COLORS.cinzaEscuro} ${COLORS.cinzaEscuro} ${COLORS.branco};
     
     margin: 5px;
+    position: absolute;
 `;
 
 export const BlueLine = styled.div`

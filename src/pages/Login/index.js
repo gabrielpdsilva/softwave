@@ -13,7 +13,8 @@ const Login = () => {
     return (
         <div style={{justifyContent: 'center', display: 'flex'}}>
             {
-            alertVisible &&   
+            alertVisible &&
+            
                 <WindowsMessage
                     onClick={onClick}
                     title="Meu título"

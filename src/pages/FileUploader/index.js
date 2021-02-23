@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import WindowsBox from '../../components/WindowsBox';
 import WindowsButton from '../../components/WindowsButton';
+import WindowsMessage from '../../components/WindowsMessage';
 import {storage} from '../../firebase';
 import transferIcon from '../../images/transfer.png';
 
@@ -28,6 +29,12 @@ const FileUploader = () => {
     const [progress, setProgress] = useState(0);
     const [category, setCategory] = useState("vaporwave");
 
+    const [successAlertVisible, setSuccessAlertVisible] = useState(false);
+    const [failAlertVisible, setFailAlertVisible] = useState(false);
+
+    const onSuccessClick = () => setSuccessAlertVisible(false);
+    const onFailureClick = () => setFailAlertVisible(false);
+
     const handleChange = e => {
         if(e.target.files[0]) {
             setImage(e.target.files[0]);
@@ -39,7 +46,7 @@ const FileUploader = () => {
     const handleUpload = () => {
 
         if(!image) {
-            alert("Nenhuma imagem foi selecionada.");
+            setFailAlertVisible(true);
             return;
         }
 
@@ -62,7 +69,7 @@ const FileUploader = () => {
                     .getDownloadURL()
                     .then(url => {
                         setUrl(url);
-                        alert("Successful");
+                        setSuccessAlertVisible(true);
                     });
             }
         );
@@ -97,19 +104,40 @@ const FileUploader = () => {
                             <option defaultValue value="vaporwave">Vaporwave</option>
                         </Select>
                     </Row>
+
                     <Image src={url || "https://i.imgur.com/YTmPA0u.jpg"} alt="firebase-image"/>
                 
                     <Row>
-                    <p> Progresso:</p>
-                    <Progress value={progress} max="100"/>
+                        <p> Progresso:</p>
+                        <Progress value={progress} max="100"/>
                     </Row>
+
                     <Row>
                         <FileInput type="file" onChange={handleChange}/>
                         <WindowsButton title="Enviar" onPress={handleUpload}/>
                     </Row>
+
                 </CentralizedContent>
 
             </WindowsBox>
+
+            {
+            successAlertVisible &&   
+                <WindowsMessage
+                    onClick={onSuccessClick}
+                    title="Sucesso"
+                    content="Imagem upada com sucesso!"
+                />
+            }
+
+            {
+            failAlertVisible &&   
+                <WindowsMessage
+                    onClick={onFailureClick}
+                    title="Erro"
+                    content="Nenhuma imagem foi selecionada!"
+                />
+            }
    
         </Container>
     )
