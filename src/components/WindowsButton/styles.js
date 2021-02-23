@@ -16,10 +16,14 @@ export const Button = styled.button`
     background-color: ${COLORS.cinzaClaro};
     border-color: ${COLORS.branco} ${COLORS.cinzaEscuro} ${COLORS.cinzaEscuro} ${COLORS.branco};
     
-    :active {
-        border-color: ${COLORS.cinzaEscuro} ${COLORS.branco} ${COLORS.branco} ${COLORS.cinzaEscuro};
+    :disabled {
+        text-shadow: 1px 1px 0 ${COLORS.branco};
+        color: ${COLORS.cinzaEscuro};
     }
 
+    :not(:disabled):active {  
+        border-color: ${COLORS.cinzaEscuro} ${COLORS.branco} ${COLORS.branco} ${COLORS.cinzaEscuro};
+    }
 `;
 
 export const Icon = styled.img`

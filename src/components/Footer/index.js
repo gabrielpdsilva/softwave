@@ -20,7 +20,7 @@ const Footer = () => {
         <footer>        
             <Container>
                 <Row>
-                    <WindowsButton image={logo} title="Start" onPress={handleStart}/>
+                    <WindowsButton image={logo} title="Start" onClick={handleStart}/>
                     <Link to="/upar">
                         <Imagem src={transferIcon}/>
                     </Link>

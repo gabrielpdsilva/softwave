@@ -9,11 +9,9 @@ import {
         Container,
         Row,
         FileInput,
-        Box,
         Select,
         Text,
         Title,
-        Subtitle,
         Image,
         Progress,
         CentralizedContent
@@ -23,6 +21,9 @@ import {
 // https://www.youtube.com/watch?v=8r1Pb6Ja90o
 
 const FileUploader = () => {
+
+    // TODO
+    // https://stackoverflow.com/questions/29805909/jquery-how-to-check-if-uploaded-file-is-an-image-without-checking-extensions
 
     const [image, setImage] = useState(null);
     const [url, setUrl] = useState("");
@@ -114,7 +115,11 @@ const FileUploader = () => {
 
                     <Row>
                         <FileInput type="file" onChange={handleChange}/>
-                        <WindowsButton title="Enviar" onPress={handleUpload}/>
+                        <WindowsButton
+                            title="Enviar"
+                            onClick={handleUpload}
+                            disabled={failAlertVisible || successAlertVisible ? true : false}
+                        />
                     </Row>
 
                 </CentralizedContent>

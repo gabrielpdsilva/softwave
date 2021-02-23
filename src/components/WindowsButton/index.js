@@ -1,9 +1,9 @@
 import React from 'react';
 import {Button, Icon} from './styles';
-const WindowsButton = ({onPress, image, title}) => {
+const WindowsButton = ({onClick, image, title, disabled}) => {
 
     return(
-        <Button onClick={onPress}>               
+        <Button onClick={onClick} disabled={disabled}>               
                 {
                     image && <Icon src={image} alt="Logo"/>
                 }
