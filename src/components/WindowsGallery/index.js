@@ -1,5 +1,5 @@
 import React from 'react';
-import {Window, Select, BlueLine, Row, Icon, Title, Button, WindowBody, GrayDiv, Text} from './styles';
+import {Window, Select, BlueLine, Icon, Title, Button, WindowBody, GrayDiv, Text} from './styles';
 
 const WindowsGallery = (props) => {
 

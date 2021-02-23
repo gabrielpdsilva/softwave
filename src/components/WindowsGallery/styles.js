@@ -30,12 +30,6 @@ export const Title = styled.p`
     color: ${COLORS.branco};
 `;
 
-export const Row = styled.div`
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-`;
-
 export const WindowBody = styled.div`
     border-style: solid;
     border-width: 1px;
@@ -50,7 +44,7 @@ export const Select = styled.select`
     border-width: 2px;
     border-color: ${COLORS.cinzaEscuro} ${COLORS.branco} ${COLORS.branco} ${COLORS.cinzaEscuro};
     background-color: ${COLORS.branco};
-    width: 92%;
+    width: 94%;
 
     option {
         background-color: ${COLORS.branco};
