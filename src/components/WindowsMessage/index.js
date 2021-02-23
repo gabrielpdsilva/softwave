@@ -1,13 +1,13 @@
 import React from 'react';
 import {Window, BlueLine, Title, Button, WindowBody, Text} from './styles';
 
-const WindowsMessage = ({title, content}) => {
+const WindowsMessage = ({title, content, onClick}) => {
 
     return (
         <Window>
             <BlueLine>
                 <Title>{title}</Title>
-                <Button>X</Button>
+                <Button onClick={onClick}>X</Button>
             </BlueLine>
             <WindowBody>
                 <Text>{content}</Text>

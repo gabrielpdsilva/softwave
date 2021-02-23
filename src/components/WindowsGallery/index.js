@@ -27,7 +27,7 @@ const WindowsGallery = (props) => {
                     <option value="cyberpunk">Cyberpunk</option>
                     <option value="doomerwave">Doomer Wave</option>
                     <option value="synthwave">Synthwave</option>
-                    <option selected value="vaporwave">Vaporwave</option>
+                    <option defaultValue value="vaporwave">Vaporwave</option>
                 </Select>
             </GrayDiv>
             <WindowBody>

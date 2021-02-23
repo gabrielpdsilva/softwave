@@ -94,7 +94,7 @@ const FileUploader = () => {
                             <option value="cyberpunk">Cyberpunk</option>
                             <option value="doomerwave">Doomer Wave</option>
                             <option value="synthwave">Synthwave</option>
-                            <option selected value="vaporwave">Vaporwave</option>
+                            <option defaultValue value="vaporwave">Vaporwave</option>
                         </Select>
                     </Row>
                     <Image src={url || "https://i.imgur.com/YTmPA0u.jpg"} alt="firebase-image"/>
@@ -104,11 +104,8 @@ const FileUploader = () => {
                     <Progress value={progress} max="100"/>
                     </Row>
                     <Row>
-                        <FileInput>
-                            <input type="file" onChange={handleChange}/>
-                        </FileInput>
-
-                    <WindowsButton title="Enviar" onPress={handleUpload}/>
+                        <FileInput type="file" onChange={handleChange}/>
+                        <WindowsButton title="Enviar" onPress={handleUpload}/>
                     </Row>
                 </CentralizedContent>
 

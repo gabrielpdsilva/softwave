@@ -12,10 +12,8 @@ export const Container = styled.div`
     justify-content: center;
 `;
 
-export const FileInput = styled.div`
-    input {
-        width: 200px;
-    }
+export const FileInput = styled.input`
+    width: 200px;
 `;
 
 export const Progress = styled.progress`

@@ -16,7 +16,7 @@ const WindowsBox = (props) => {
                     <Title>{props.title}</Title>
                 </div>
                 <div>
-                    <Button disabled>_</Button>
+                    <Button onClick={()=> navigate("/")}>_</Button>
                     <Button disabled>X</Button>
                 </div>
             </BlueLine>
