@@ -51,6 +51,16 @@ const FileUploader = () => {
             return;
         }
 
+        const file = image;
+        const  fileType = file['type'];
+
+        const validImageTypes = ['image/jpeg', 'image/png'];
+        if (!validImageTypes.includes(fileType)) {
+            console.log("invalid image...");
+            setFailAlertVisible(true);
+            return;
+        }
+        
         const uploadTask = storage.ref(`images/${category}/${image.name}`).put(image);
         uploadTask.on(
             "state_changed",
@@ -140,7 +150,7 @@ const FileUploader = () => {
                 <WindowsMessage
                     onClick={onFailureClick}
                     title="Erro"
-                    content="Nenhuma imagem foi selecionada!"
+                    content="Você precisa selecionar uma imagem válida pra continuar!"
                 />
             }
    
