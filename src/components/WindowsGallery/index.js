@@ -1,15 +1,27 @@
 import React from 'react';
-import {Window, FooterGallery, Select, BlueLine, Text, Icon, Title, Button, WindowBody, GrayDiv} from './styles';
+import {
+    Window,
+    FooterGallery,
+    Select,
+    BlueLine,
+    Text,
+    Icon,
+    Title,
+    Button,
+    WindowBody,
+    GrayDiv,
+    DivIcon
+} from './styles';
 
 const WindowsGallery = (props) => {
 
     return (
         <Window>
             <BlueLine>
-                <div style={{justifyContent: 'left', display: 'flex'}}>
+                <DivIcon>
                     <Icon src={props.icon}/>
                     <Title>{props.title}</Title>
-                </div>
+                </DivIcon>
                 <div>
                     <Button disabled>_</Button>
                     <Button disabled>X</Button>

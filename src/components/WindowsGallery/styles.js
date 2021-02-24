@@ -13,13 +13,18 @@ export const Window = styled.div`
 
 `;
 
+export const DivIcon = styled.div`
+    justify-content: left;
+    display: flex;
+`;
+
 export const Icon = styled.img`
     width: 20px;
     height: 20px;
 `;
 
 export const Text = styled.p`
-    color: red;
+    color: ${COLORS.preto};
 `;
 
 export const BlueLine = styled.div`
@@ -48,7 +53,7 @@ export const Select = styled.select`
     border-width: 2px;
     border-color: ${COLORS.cinzaEscuro} ${COLORS.branco} ${COLORS.branco} ${COLORS.cinzaEscuro};
     background-color: ${COLORS.branco};
-    width: 94%;
+    width: 93%;
 
     option {
         background-color: ${COLORS.branco};
@@ -89,8 +94,4 @@ export const FooterGallery = styled.div`
     border-width: 2px;
     padding: 2px;
     border-color: ${COLORS.cinzaEscuro} ${COLORS.branco} ${COLORS.branco} ${COLORS.cinzaEscuro};
-
-    p {
-        color: red;
-    }
 `;
