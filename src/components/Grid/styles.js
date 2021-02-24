@@ -10,12 +10,14 @@ export const CustomGrid = styled.div`
 
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 8px;
-    max-width: 1500px;
-    width: 100%;
+    max-width: 100%;
+    width: 92%;
     margin: 0 auto;
 
     //pra imagem nao escapar da tela
-    overflow: hidden;
+    //overflow: hidden;
+    height: 500px;
+    overflow-y: scroll;
 `;
 
 export const Image = styled.img`
