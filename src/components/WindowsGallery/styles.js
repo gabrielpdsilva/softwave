@@ -18,6 +18,10 @@ export const Icon = styled.img`
     height: 20px;
 `;
 
+export const Text = styled.p`
+    color: red;
+`;
+
 export const BlueLine = styled.div`
     background-image: linear-gradient(to right, ${COLORS.azulEscuro}, ${COLORS.azulClaro});
     //background-color: ${COLORS.azulEscuro};
@@ -75,5 +79,18 @@ export const GrayDiv = styled.div`
     padding-top: 5px;
     p {
         margin-right: 10px;
+    }
+`;
+
+export const FooterGallery = styled.div`
+    background-color: ${COLORS.cinzaClaro};
+    margin: 10px;
+    border-style: solid;
+    border-width: 2px;
+    padding: 2px;
+    border-color: ${COLORS.cinzaEscuro} ${COLORS.branco} ${COLORS.branco} ${COLORS.cinzaEscuro};
+
+    p {
+        color: red;
     }
 `;

@@ -1,5 +1,5 @@
 import React from 'react';
-import {Window, Select, BlueLine, Icon, Title, Button, WindowBody, GrayDiv, Text} from './styles';
+import {Window, FooterGallery, Select, BlueLine, Text, Icon, Title, Button, WindowBody, GrayDiv} from './styles';
 
 const WindowsGallery = (props) => {
 
@@ -16,13 +16,13 @@ const WindowsGallery = (props) => {
                 </div>
             </BlueLine>
             <GrayDiv>
-                <p>File</p>
-                <p>Edit</p>
-                <p>View</p>
-                <p>Help</p>
+                <Text>File</Text>
+                <Text>Edit</Text>
+                <Text>View</Text>
+                <Text>Help</Text>
             </GrayDiv>
             <GrayDiv>
-                Categoria
+                <Text>Categoria</Text>
                 <Select value={props.category} onChange={props.onPress}>
                     <option value="cyberpunk">Cyberpunk</option>
                     <option value="doomerwave">Doomer Wave</option>
@@ -33,6 +33,9 @@ const WindowsGallery = (props) => {
             <WindowBody>
                 {props.children}
             </WindowBody>
+            <FooterGallery>
+                <Text>Object(s) found</Text>
+            </FooterGallery>
         </Window>
     )
 }
