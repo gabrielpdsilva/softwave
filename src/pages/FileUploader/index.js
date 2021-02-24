@@ -42,21 +42,22 @@ const FileUploader = () => {
         }
     };
 
+    const validFormat = (image) => {
+        const file = image;
+        const  fileType = file['type'];
+        const validImageTypes = ['image/jpeg', 'image/png'];
+
+        if (!validImageTypes.includes(fileType)) {            
+            return false;
+        }
+        return true;
+    }
+
     console.log(image);
 
     const handleUpload = () => {
 
-        if(!image) {
-            setFailAlertVisible(true);
-            return;
-        }
-
-        const file = image;
-        const  fileType = file['type'];
-
-        const validImageTypes = ['image/jpeg', 'image/png'];
-        if (!validImageTypes.includes(fileType)) {
-            console.log("invalid image...");
+        if(!image || !validFormat(image)) {
             setFailAlertVisible(true);
             return;
         }
