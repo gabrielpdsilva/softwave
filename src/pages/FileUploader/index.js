@@ -30,11 +30,12 @@ const FileUploader = () => {
     const [progress, setProgress] = useState(0);
     const [category, setCategory] = useState("vaporwave");
 
-    const [successAlertVisible, setSuccessAlertVisible] = useState(false);
-    const [failAlertVisible, setFailAlertVisible] = useState(false);
+    const [textAlert, setTextAlert] = useState("");
+    const [titleAlert, setTitleAlert] = useState("");
 
-    const onSuccessClick = () => setSuccessAlertVisible(false);
-    const onFailureClick = () => setFailAlertVisible(false);
+    const [alertVisible, setAlertVisible] = useState(false);
+
+    const onAlertClick = () => setAlertVisible(false);
 
     const handleChange = e => {
         if(e.target.files[0]) {
@@ -58,7 +59,9 @@ const FileUploader = () => {
     const handleUpload = () => {
 
         if(!image || !validFormat(image)) {
-            setFailAlertVisible(true);
+            setTitleAlert("Erro");
+            setTextAlert("Você precisa selecionar um tipo válido de imagem!");
+            setAlertVisible(true);
             return;
         }
         
@@ -81,7 +84,9 @@ const FileUploader = () => {
                     .getDownloadURL()
                     .then(url => {
                         setUrl(url);
-                        setSuccessAlertVisible(true);
+                        setTitleAlert("Sucesso");
+                        setTextAlert("A imagem foi upada com sucesso!");
+                        setAlertVisible(true);
                     });
             }
         );
@@ -129,7 +134,7 @@ const FileUploader = () => {
                         <WindowsButton
                             title="Enviar"
                             onClick={handleUpload}
-                            disabled={failAlertVisible || successAlertVisible ? true : false}
+                            disabled={alertVisible ? true : false}
                         />
                     </Row>
 
@@ -138,20 +143,11 @@ const FileUploader = () => {
             </WindowsBox>
 
             {
-            successAlertVisible &&   
+            alertVisible &&   
                 <WindowsMessage
-                    onClick={onSuccessClick}
-                    title="Sucesso"
-                    content="Imagem upada com sucesso!"
-                />
-            }
-
-            {
-            failAlertVisible &&   
-                <WindowsMessage
-                    onClick={onFailureClick}
-                    title="Erro"
-                    content="Você precisa selecionar uma imagem válida pra continuar!"
+                    onClick={onAlertClick}
+                    title={titleAlert}
+                    content={textAlert}
                 />
             }
    
