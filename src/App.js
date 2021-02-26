@@ -30,8 +30,6 @@ function App() {
           <Route path="/cadastro" element={<Registration/>}/>
           <Route path="/upar" element={<FileUploader/>}/>
           <Route path="/sobre" element={<About/>}/>
-
-          {/*TODO*/}
           <Route path="*" element={<NotFound/>}/>
 
         </Routes>
