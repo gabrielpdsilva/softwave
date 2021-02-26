@@ -48,12 +48,11 @@ export const WindowBody = styled.div`
 `;
 
 export const Select = styled.select`
-    margin-left: 10px;
     border: solid;
     border-width: 2px;
     border-color: ${COLORS.cinzaEscuro} ${COLORS.branco} ${COLORS.branco} ${COLORS.cinzaEscuro};
     background-color: ${COLORS.branco};
-    width: 93%;
+    width: 94%;
 
     option {
         background-color: ${COLORS.branco};
