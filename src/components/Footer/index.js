@@ -14,7 +14,7 @@ const Footer = () => {
 
     const anoAtual = new Date().getFullYear();
 
-    const handleStart = () => alert("clicou em Start");
+    const handleStart = () => alert("Start...");
 
     return (
         <footer>        

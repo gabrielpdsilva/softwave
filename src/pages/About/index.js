@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react';
+import React, {useEffect, useState} from 'react';
 import WindowsBox from '../../components/WindowsBox';
 import {Container} from './styles';
 import helpIcon from '../../images/help.png';
