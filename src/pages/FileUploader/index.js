@@ -46,7 +46,7 @@ const FileUploader = () => {
     const validFormat = (image) => {
         const file = image;
         const  fileType = file['type'];
-        const validImageTypes = ['image/jpeg', 'image/png'];
+        const validImageTypes = ['image/jpeg', 'image/png', 'image/gif'];
 
         if (!validImageTypes.includes(fileType)) {            
             return false;
@@ -111,9 +111,9 @@ const FileUploader = () => {
 
                     <Title>Upar Imagem</Title>
                     <Text>Escolha uma imagem incrível para upar no Softwave!</Text>
-
+                    <Text>Formatos válidos: JPEG, PNG, GIF.</Text>
                     <Row>
-                        <p>Categoria: </p>
+                        <Text>Categoria: </Text>
                         <Select value={category} onChange={handleSelect}>
                             <option value="cyberpunk">Cyberpunk</option>
                             <option value="doomerwave">Doomer Wave</option>

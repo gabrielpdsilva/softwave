@@ -49,7 +49,7 @@ export const Subtitle = styled.h2`
 `;
 
 export const Text = styled.p`
-    color: ${COLORS.azulEscuro};
+    color: ${COLORS.preto};
 `;
 
 export const Row = styled.div`
