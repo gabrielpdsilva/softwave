@@ -3,6 +3,7 @@ import COLORS from '../../styles/colors'
 
 export const Window = styled.div`
     width: 30%;
+    min-width: 290px;
     background-color: ${COLORS.cinzaClaro};
     
     border: solid;

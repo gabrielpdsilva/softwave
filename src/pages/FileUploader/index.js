@@ -111,7 +111,9 @@ const FileUploader = () => {
 
                     <Title>Upar Imagem</Title>
                     <Text>Escolha uma imagem incrível para upar no Softwave!</Text>
+                    
                     <Text>Formatos válidos: JPEG, PNG, GIF.</Text>
+                   
                     <Row>
                         <Text>Categoria: </Text>
                         <Select value={category} onChange={handleSelect}>
@@ -125,7 +127,7 @@ const FileUploader = () => {
                     <Image src={url || "https://i.imgur.com/YTmPA0u.jpg"} alt="firebase-image"/>
                 
                     <Row>
-                        <p> Progresso:</p>
+                        <Text> Progresso:</Text>
                         <Progress value={progress} max="100"/>
                     </Row>
 

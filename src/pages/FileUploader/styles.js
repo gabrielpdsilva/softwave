@@ -56,6 +56,8 @@ export const Row = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
+    
+    margin: 10px;
 `;
 
 export const Select = styled.select`
@@ -70,27 +72,4 @@ export const Select = styled.select`
     option {
         background-color: ${COLORS.branco};
     }
-`;
-
-export const Box = styled.div`
-    display: block;
-
-    box-sizing: border-box;
-    max-width: 1000px;
-    max-height: 1000px;
-    height: 500px;
-    width: 500px;
-    max-height: 75%;
-    min-height: 300px;
-
-    border-color:#FFFFFF #808080 #808080 #FFFFFF;
-    border-style: solid;
-    border-width: 1px;
-
-    background-color: ${COLORS.cinzaClaro};
-//    margin: auto;
-//    width: 30%;
-//    height: 60%;
-    text-align: center;
-    margin-bottom: 100px;
 `;
