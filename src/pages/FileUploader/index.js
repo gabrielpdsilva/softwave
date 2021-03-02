@@ -117,6 +117,7 @@ const FileUploader = () => {
                     <Row>
                         <Text>Categoria: </Text>
                         <Select value={category} onChange={handleSelect}>
+                            <option value="anime">80's animes</option>
                             <option value="cyberpunk">Cyberpunk</option>
                             <option value="doomerwave">Doomer Wave</option>
                             <option value="synthwave">Synthwave</option>

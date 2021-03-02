@@ -107,7 +107,7 @@ const Home = () => {
                         icon={folderIcon}
                         title="Exploring - Images\Categoria"
                         category={category}
-                        onPress={handleSelect}
+                        onClick={handleSelect}
                     >
                         <Grid urls={urls}/>
                     </WindowsGallery>

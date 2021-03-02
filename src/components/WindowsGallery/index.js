@@ -35,7 +35,8 @@ const WindowsGallery = (props) => {
             </GrayDiv>
             <GrayDiv>
                 <Text>Categoria</Text>
-                <Select value={props.category} onChange={props.onPress}>
+                <Select value={props.category} onChange={props.onClick}>
+                    <option value="anime">80's animes</option>
                     <option value="cyberpunk">Cyberpunk</option>
                     <option value="doomerwave">Doomer Wave</option>
                     <option value="synthwave">Synthwave</option>
